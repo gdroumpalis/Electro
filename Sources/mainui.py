@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 import UI.mainui
-import Utilities.EventConnector as EVC
-import Sources.RendererUtilities as rutils
-import Renderer.MRenderer as mrenderer
+from Utilities.EventConnector import *
+from Sources.RendererUtilities import *
+from Renderer.MRenderer import *
 class MainUI(QMainWindow):
 
     def __init__(self):
@@ -14,9 +14,9 @@ class MainUI(QMainWindow):
 
 
     def connectuicomponetstosignal(self):
-        EVC.connect(self.ui.actionClose.triggered, self.closeapplication)
-        EVC.connect(self.ui.startpushbutton.clicked , self.startthread)
-        EVC.connect(self.ui.stoppushbutton.clicked,self.stopmethod)
+        connect(self.ui.actionClose.triggered, self.closeapplication)
+        connect(self.ui.startpushbutton.clicked , self.startthread)
+        connect(self.ui.stoppushbutton.clicked,self.stopmethod)
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -25,10 +25,13 @@ class MainUI(QMainWindow):
         self.close()
 
     def startthread(self):
-        rthreadparams = rutils.RendererParameters(False, False, 600, 600,"")
-        self.cancel = False
-        self.rthread = mrenderer.RendererThread(rthreadparams , self.cancel)
+        self.rthreadparams = RendererParameters(False, False, 600, 600,"")
+        self.rthread = RendererThread(self.rthreadparams )
+        connect(self.rthread.finished , self.threadfinished)
         self.rthread.start()
 
     def stopmethod(self):
-        self.rthread.cancel = True
+        self.rthread.abort = True
+
+    def threadfinished(self):
+        print("thread finished")
