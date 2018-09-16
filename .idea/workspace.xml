@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Renderer/MRenderer.py" line="12" mnemonic="0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Renderer/initialrenderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sources/RendererUtilities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/mainui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,27 +31,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="init" value="3" />
-          <entry key="py" value="25" />
+          <entry key="init" value="4" />
+          <entry key="py" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="28" />
+          <entry key="Python" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="" value="57" />
+          <entry key="&quot;&quot;" value="5" />
           <entry key="Python Console" value="18" />
+          <entry key="dummy" value="33" />
           <entry key="init" value="127" />
-          <entry key="py" value="559" />
-          <entry key="txt" value="30" />
+          <entry key="py" value="1712" />
+          <entry key="txt" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="704" />
+          <entry key="PLAIN_TEXT" value="91" />
+          <entry key="Python" value="1919" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -59,12 +70,24 @@
     <favorites_list name="Electro" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sources/mainui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="364">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -72,10 +95,65 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="160" selection-start-line="160" selection-end-line="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="444">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1537123855447" expanded="true" signature="220:230" ph="..." />
+                <marker date="1537123855447" expanded="true" signature="1311:1316" ph="..." />
+                <marker date="1537123855447" expanded="true" signature="1362:1367" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtCore/QThread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib64/python3.5/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="310" selection-start-line="310" selection-end-line="310" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -101,11 +179,16 @@
     </option>
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SCOPE" value="All" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Sources/init" />
         <option value="$PROJECT_DIR$/Utilities/EventConnector.py" />
+        <option value="$PROJECT_DIR$/Sources/RendererParams.py" />
+        <option value="$PROJECT_DIR$/Sources/RendererUtilities.py" />
         <option value="$PROJECT_DIR$/Sources/mainui.py" />
         <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
       </list>
@@ -134,6 +217,21 @@
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Renderer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,30 +326,46 @@
       <option name="project" value="LOCAL" />
       <updated>1537118408770</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added initial renderer file">
+      <created>1537118876714</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537118876714</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" weight="0.22890295" />
-      <window_info active="true" content_ui="combo" x="1920" y="40" width="470" height="1038" id="Project" order="1" type="WINDOWED" visible="true" weight="0.25" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" x="1920" y="36" width="500" height="1044" id="Project" order="0" type="WINDOWED" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" weight="0.22890295" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5010548" side_tool="true" weight="0.4088937" />
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" x="1979" y="58" width="1808" height="1001" id="Version Control" order="4" sideWeight="0.49894515" type="WINDOWED" visible="true" weight="0.4088937" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.329718" />
-      <window_info anchor="bottom" x="2370" y="46" width="1447" height="1028" id="Debug" order="6" type="WINDOWED" weight="0.3991323" />
+      <window_info anchor="bottom" x="1990" y="52" width="1808" height="1001" id="Version Control" order="4" sideWeight="0.49894515" type="WINDOWED" weight="0.4088937" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" x="2365" y="49" width="1457" height="1030" id="Debug" order="6" type="WINDOWED" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.329718" />
       <window_info anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" weight="0.32853717" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.45619658" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -372,9 +486,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="revert" />
     <MESSAGE value="Initial UI at master" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial UI at master" />
+    <MESSAGE value="Added initial renderer file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added initial renderer file" />
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>self.cancel == True</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
       <expression>
         <expression-string>type(control) is QAction</expression-string>
@@ -414,16 +536,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UI/*.py" />
-    <entry file="file://$PROJECT_DIR$/init">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/mainui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -431,21 +543,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib64/python3.5/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/mainui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="364">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtCore/QThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="444">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1537123855447" expanded="true" signature="220:230" ph="..." />
+            <marker date="1537123855447" expanded="true" signature="1311:1316" ph="..." />
+            <marker date="1537123855447" expanded="true" signature="1362:1367" ph="..." />
           </folding>
         </state>
       </provider>
