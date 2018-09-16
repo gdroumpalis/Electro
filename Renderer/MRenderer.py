@@ -43,7 +43,7 @@ def update(f,curve,curve2, ptr, Xm , Am , ser):
     QtGui.QApplication.processEvents()    # you MUST process the plot now
 
 
-def StatRendering():
+def StatRendering(cancel):
     portName = "/dev/ttyUSB0"  # replace this port name by yours!
     baudrate = 1200
     ser = serial.Serial(portName, baudrate)
@@ -63,7 +63,7 @@ def StatRendering():
     ptr = 1
     try:
         f = open("log.txt", "w+")
-        while True:
+        while cancel == False:
             update(f,curve,curve2, ptr, Xm , Am , ser)
     except KeyboardInterrupt:
         print("finished")

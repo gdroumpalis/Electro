@@ -24,7 +24,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stopbutton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>510</y>
+      <width>94</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>stop</string>
     </property>
    </widget>
   </widget>
