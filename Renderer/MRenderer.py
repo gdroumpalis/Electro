@@ -23,8 +23,8 @@ import datetime
 # ptr = 1                      # set first x position
 
 # Realtime data plot. Each time this function is called, the data display is updated
-def update(f):
-    global curve,curve2, ptr, Xm , Am
+def update(f,curve,curve2, ptr, Xm , Am):
+    # global curve,curve2, ptr, Xm , Am
     Xm[:-1] = Xm[1:]                      # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()                # read line (single value) from the serial port
@@ -64,7 +64,7 @@ def StatRendering():
     try:
         f = open("log.txt", "w+")
         while True:
-            update(f)
+            update(f,curve,curve2, ptr, Xm , Am)
     except KeyboardInterrupt:
         print("finished")
     finally:

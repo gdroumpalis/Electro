@@ -24,4 +24,7 @@ class MainUI(QMainWindow):
         self.close()
 
     def StartRendering(self):
-        Megaman.StatRendering()
+        try:
+            Megaman.StatRendering()
+        finally:
+            pass
