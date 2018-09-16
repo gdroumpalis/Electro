@@ -8,7 +8,10 @@ class MainUI(QMainWindow):
         super().__init__()
         self.ui = UI.mainui.Ui_MainWindow()
         self.ui.setupUi(self)
-        EVC.connect(self.ui.actionClose.triggered,self.CloseApplication)
+        self.InitializeFileMenu()
+
+    def InitializeFileMenu(self):
+        EVC.connect(self.ui.actionClose.triggered, self.CloseApplication)
         self.ui.actionClose.setShortcut("ctrl+q")
 
     def CloseApplication(self):
