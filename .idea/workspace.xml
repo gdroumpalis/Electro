@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/mainui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init" beforeDir="false" afterPath="$PROJECT_DIR$/init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +27,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="init" value="4" />
-          <entry key="py" value="38" />
+          <entry key="py" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="42" />
+          <entry key="Python" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -46,12 +43,12 @@
           <entry key="dummy" value="33" />
           <entry key="init" value="140" />
           <entry key="py" value="2493" />
-          <entry key="txt" value="115" />
+          <entry key="txt" value="176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="148" />
+          <entry key="PLAIN_TEXT" value="209" />
           <entry key="Python" value="2713" />
         </counts>
       </usages-collector>
@@ -68,76 +65,77 @@
     <favorites_list name="Electro" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5618221">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/init">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                    <marker date="1537211085594" expanded="true" signature="304:313" ph="..." />
-                    <marker date="1537211085594" expanded="true" signature="1483:1488" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-                  <folding>
-                    <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Sources/mainui.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-                  <folding>
-                    <element signature="e#0#62#0" expanded="true" />
-                    <marker date="1537213900259" expanded="true" signature="860:869" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-290">
-                  <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <folding>
+                <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sources/mainui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="48" column="15" lean-forward="true" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#200#238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -169,6 +167,7 @@
         <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
         <option value="$PROJECT_DIR$/init" />
         <option value="$PROJECT_DIR$/Sources/mainui.py" />
+        <option value="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" />
       </list>
     </option>
   </component>
@@ -190,17 +189,6 @@
             <path>
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Electro" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Electro" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537136651472</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Check out os.spawnl for starting the rendering process">
+      <created>1537214527851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537214527852</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -332,7 +327,7 @@
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="1932" y="28" width="521" height="1052" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" x="1932" y="28" width="521" height="1052" id="Project" order="0" visible="true" weight="0.21940929" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.22890295" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5010548" side_tool="true" weight="0.4088937" />
@@ -475,14 +470,15 @@
     <MESSAGE value="Added initial renderer file" />
     <MESSAGE value="threading test for renderer" />
     <MESSAGE value="Threading most correct way" />
-    <option name="LAST_COMMIT_MESSAGE" value="Threading most correct way" />
+    <MESSAGE value="Check out os.spawnl for starting the rendering process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check out os.spawnl for starting the rendering process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>35</line>
+          <line>32</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -587,28 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding>
-            <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1537211085594" expanded="true" signature="304:313" ph="..." />
-            <marker date="1537211085594" expanded="true" signature="1483:1488" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -619,10 +593,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
+    <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="120">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding>
+            <marker date="1537120652089" expanded="true" signature="25:30" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -632,7 +619,23 @@
           <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
-            <marker date="1537213900259" expanded="true" signature="860:869" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Renderer/initialrenderer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="48" column="15" lean-forward="true" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#200#238#0" expanded="true" />
           </folding>
         </state>
       </provider>
