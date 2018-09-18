@@ -14,12 +14,6 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.startpushbutton = QtWidgets.QPushButton(self.centralwidget)
-        self.startpushbutton.setGeometry(QtCore.QRect(10, 10, 94, 34))
-        self.startpushbutton.setObjectName("startpushbutton")
-        self.stoppushbutton = QtWidgets.QPushButton(self.centralwidget)
-        self.stoppushbutton.setGeometry(QtCore.QRect(110, 10, 94, 34))
-        self.stoppushbutton.setObjectName("stoppushbutton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -45,8 +39,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Electro"))
-        self.startpushbutton.setText(_translate("MainWindow", "Start"))
-        self.stoppushbutton.setText(_translate("MainWindow", "Stop"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionOpen_Plot_File.setText(_translate("MainWindow", "Open Plot File"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
