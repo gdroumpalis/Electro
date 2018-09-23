@@ -20,7 +20,7 @@ class MainUI(QMainWindow):
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
         connect(self.ui.actionopen_settings.triggered, self.opensettingsdialog)
-        connect(self.ui.actionStart_Plotting.triggered,self.test)
+
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
         self.ui.actionopen_settings.setShortcut("ctrl+p")
@@ -39,6 +39,15 @@ class MainUI(QMainWindow):
             devices = f.readlines()
         for dev in devices:
             self.devices.append("/dev/"+dev.replace("\n",""))
+        self.saveSettings()
+        self.selectdeviceifexists()
 
-    def test(self):
-        print(self.selecteddevice)
+    def selectdeviceifexists(self):
+        if len(self.devices) >0:
+            self.selecteddevice = self.devices[0]
+
+    def saveSettings(self):
+        with open("settings","w+") as file:
+            file.writelines("selecteddevice:" + str(self.selecteddevice))
+            file.writelines("speed:1200")
+            file.writelines("showui:1")

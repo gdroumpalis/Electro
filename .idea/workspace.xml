@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/settings.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/settings.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/settingsdialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/settingsdialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +34,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="init" value="5" />
           <entry key="py" value="61" />
           <entry key="qrc" value="1" />
@@ -38,7 +43,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="66" />
           <entry key="XML" value="1" />
         </counts>
@@ -49,16 +54,16 @@
           <entry key="&quot;&quot;" value="5" />
           <entry key="Python Console" value="18" />
           <entry key="dummy" value="60" />
-          <entry key="gitignore" value="22" />
+          <entry key="gitignore" value="31" />
           <entry key="init" value="140" />
-          <entry key="py" value="3962" />
-          <entry key="txt" value="396" />
+          <entry key="py" value="4242" />
+          <entry key="txt" value="439" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="478" />
-          <entry key="Python" value="4182" />
+          <entry key="PLAIN_TEXT" value="530" />
+          <entry key="Python" value="4462" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -78,11 +83,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+            <state relative-caret-position="240">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1537713012409" expanded="true" signature="138:139" ph="..." />
+                <marker date="1537721685184" expanded="true" signature="138:139" ph="..." />
+                <marker date="1537721685184" expanded="true" signature="470:584" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,10 +97,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="-300">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="e#0#62#0" expanded="true" />
+                <marker date="1537713474054" expanded="true" signature="1500:1585" ph="..." />
               </folding>
             </state>
           </provider>
@@ -157,8 +163,8 @@
         <option value="$PROJECT_DIR$/UI/mainui.py" />
         <option value="$PROJECT_DIR$/Sources/mainui.py" />
         <option value="$PROJECT_DIR$/Utilities/GlobalUtilities.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Sources/maindialog.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Sources/settingsdialog.py" />
       </list>
     </option>
@@ -397,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537711476614</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="initial dialog communication. select device">
+      <created>1537713073068</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1537713073068</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -413,16 +426,16 @@
     <frame x="43" y="28" width="1877" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="1932" y="28" width="537" height="1052" id="Project" order="0" type="FLOATING" visible="true" weight="0.21940929" />
+      <window_info content_ui="combo" x="1932" y="28" width="537" height="1052" id="Project" order="0" type="FLOATING" visible="true" weight="0.21940929" />
       <window_info x="2483" y="23" width="534" height="1046" id="Structure" order="1" type="FLOATING" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.22890295" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5010548" side_tool="true" weight="0.4088937" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50134915" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.329718" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.49894515" weight="0.4088937" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.49865085" weight="0.4088937" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49865085" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.329718" />
@@ -581,7 +594,8 @@
     <MESSAGE value="added arguments (just to remember) remove buttons" />
     <MESSAGE value="Add resource mechanism. Add open and close icons. Update project settings" />
     <MESSAGE value="Add initialization of devices. New settings icons. settings ui changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initialization of devices. New settings icons. settings ui changes" />
+    <MESSAGE value="initial dialog communication. select device" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial dialog communication. select device" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -750,20 +764,6 @@
     <entry file="file://$PROJECT_DIR$/Sources/devices.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib64/python3.5/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -775,6 +775,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="2302" column="8" selection-start-line="2302" selection-start-column="8" selection-end-line="2302" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="106" column="17" lean-forward="true" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -790,21 +804,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="-300">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#62#0" expanded="true" />
+            <marker date="1537713474054" expanded="true" signature="1500:1585" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+        <state relative-caret-position="240">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1537713012409" expanded="true" signature="138:139" ph="..." />
+            <marker date="1537721685184" expanded="true" signature="138:139" ph="..." />
+            <marker date="1537721685184" expanded="true" signature="470:584" ph="..." />
           </folding>
         </state>
       </provider>

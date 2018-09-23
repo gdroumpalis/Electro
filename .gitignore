@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 
 /Sources/devices.txt
+/Sources/settings
