@@ -10,6 +10,7 @@ class MainUI(QMainWindow):
     def __init__(self):
         super().__init__()
         self.devices = list()
+        self.selecteddevice = None
         self.ui = UI.mainui.Ui_MainWindow()
         self.ui.setupUi(self)
         self.startdevicesinitialization()
@@ -19,7 +20,7 @@ class MainUI(QMainWindow):
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
         connect(self.ui.actionopen_settings.triggered, self.opensettingsdialog)
-
+        connect(self.ui.actionStart_Plotting.triggered,self.test)
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
         self.ui.actionopen_settings.setShortcut("ctrl+p")
@@ -28,7 +29,7 @@ class MainUI(QMainWindow):
         self.close()
 
     def opensettingsdialog(self):
-        settingsdialog = SettingUI()
+        settingsdialog = SettingUI(maindlg=self)
         ShowDialog(settingsdialog)
 
     def startdevicesinitialization(self):
@@ -38,3 +39,6 @@ class MainUI(QMainWindow):
             devices = f.readlines()
         for dev in devices:
             self.devices.append("/dev/"+dev.replace("\n",""))
+
+    def test(self):
+        print(self.selecteddevice)

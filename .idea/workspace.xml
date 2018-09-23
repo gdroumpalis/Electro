@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Renderer/MRenderer.py" line="12" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/Sources/settingsdialog.py" line="12" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="Add resource mechanism. Add open and close icons. Update project settings">
-      <change afterPath="$PROJECT_DIR$/Resources/Icons/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/settings.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sources/settingsdialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ElectroRes.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ElectroRes.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/EventConnector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/GlobalUtilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init" beforeDir="false" afterPath="$PROJECT_DIR$/init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/settingsdialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/settingsdialog.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,14 +51,14 @@
           <entry key="dummy" value="60" />
           <entry key="gitignore" value="22" />
           <entry key="init" value="140" />
-          <entry key="py" value="3561" />
-          <entry key="txt" value="319" />
+          <entry key="py" value="3962" />
+          <entry key="txt" value="396" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="401" />
-          <entry key="Python" value="3781" />
+          <entry key="PLAIN_TEXT" value="478" />
+          <entry key="Python" value="4182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -84,33 +75,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="380">
+              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
               <folding>
-                <element signature="e#2#37#0" expanded="true" />
-                <marker date="1537711237289" expanded="true" signature="100:101" ph="..." />
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1537713012409" expanded="true" signature="138:139" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib64/python3.5/typing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="2302" column="8" selection-start-line="2302" selection-start-column="8" selection-end-line="2302" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -130,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utilities/GlobalUtilities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
                 <marker date="1537703912435" expanded="true" signature="148:153" ph="..." />
               </folding>
@@ -176,8 +158,8 @@
         <option value="$PROJECT_DIR$/Sources/mainui.py" />
         <option value="$PROJECT_DIR$/Utilities/GlobalUtilities.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Sources/settingsdialog.py" />
         <option value="$PROJECT_DIR$/Sources/maindialog.py" />
+        <option value="$PROJECT_DIR$/Sources/settingsdialog.py" />
       </list>
     </option>
   </component>
@@ -408,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537697529818</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add initialization of devices. New settings icons. settings ui changes">
+      <created>1537711476614</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537711476614</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -591,18 +580,8 @@
     <MESSAGE value="added examples" />
     <MESSAGE value="added arguments (just to remember) remove buttons" />
     <MESSAGE value="Add resource mechanism. Add open and close icons. Update project settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add resource mechanism. Add open and close icons. Update project settings" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Add initialization of devices. New settings icons. settings ui changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initialization of devices. New settings icons. settings ui changes" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -613,6 +592,16 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self.maindlg.devices</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.maindlg</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>self.devices</expression-string>
         <language-id>Python</language-id>
@@ -758,16 +747,6 @@
     <entry file="file://$PROJECT_DIR$/ElectroRes_rc.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utilities/GlobalUtilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <marker date="1537703912435" expanded="true" signature="148:153" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/devices.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -775,13 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1074">
           <caret line="105" column="20" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib64/python3.5/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="2302" column="8" selection-start-line="2302" selection-start-column="8" selection-end-line="2302" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -799,23 +771,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
+    <entry file="file:///usr/lib64/python3.5/typing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="196">
+          <caret line="2302" column="8" selection-start-line="2302" selection-start-column="8" selection-end-line="2302" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utilities/GlobalUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#2#37#0" expanded="true" />
-            <marker date="1537711237289" expanded="true" signature="100:101" ph="..." />
+            <marker date="1537703912435" expanded="true" signature="148:153" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        <state relative-caret-position="240">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1537713012409" expanded="true" signature="138:139" ph="..." />
           </folding>
         </state>
       </provider>
