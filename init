@@ -2,10 +2,10 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-import Sources.mainui as initElectro
+from Sources.maindialog import MainUI
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = initElectro.MainUI()
+    ex = MainUI()
     ex.show()
     sys.exit(app.exec_())

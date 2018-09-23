@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="open">
+    <file>Icons/open.png</file>
+  </qresource>
+  <qresource prefix="settings">
+    <file>Icons/settings.png</file>
+  </qresource>
+  <qresource prefix="plotsettings">
+    <file>Icons/plotsettings.png</file>
+  </qresource>
+  <qresource prefix="start">
+    <file>Icons/start.png</file>
+  </qresource>
+  <qresource prefix="close">
+    <file>Icons/close.png</file>
+  </qresource>
+</RCC>
