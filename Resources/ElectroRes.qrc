@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="open">
+    <file>Icons/open.png</file>
+  </qresource>
+  <qresource prefix="close">
+    <file>Icons/close.png</file>
+  </qresource>
+</RCC>

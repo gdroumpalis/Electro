@@ -15,23 +15,10 @@ class MainUI(QMainWindow):
 
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
-        connect(self.ui.startpushbutton.clicked , self.startthread)
-        connect(self.ui.stoppushbutton.clicked,self.stopmethod)
+
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
 
     def closeapplication(self):
         self.close()
-
-    def startthread(self):
-        self.rthreadparams = RendererParameters(False, False, 600, 600,"")
-        self.rthread = RendererThread(self.rthreadparams )
-        connect(self.rthread.finished , self.threadfinished)
-        self.rthread.start()
-
-    def stopmethod(self):
-        self.rthread.abort = True
-
-    def threadfinished(self):
-        print("thread finished")

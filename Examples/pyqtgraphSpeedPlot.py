@@ -41,7 +41,7 @@ def update():
     lastTime = now
     if fps is None:
         fps = 1.0 / dt
-    else:
+    else:~
         s = np.clip(dt * 3., 0, 1)
         fps = fps * (1 - s) + (1.0 / dt) * s
     p.setTitle('%0.2f fps' % fps)
