@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/settings.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/settings.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/settingsdialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/settingsdialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,12 +52,12 @@
           <entry key="gitignore" value="31" />
           <entry key="init" value="140" />
           <entry key="py" value="4242" />
-          <entry key="txt" value="439" />
+          <entry key="txt" value="485" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="530" />
+          <entry key="PLAIN_TEXT" value="576" />
           <entry key="Python" value="4462" />
         </counts>
       </usages-collector>
@@ -83,12 +78,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="80">
+              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1537721685184" expanded="true" signature="138:139" ph="..." />
-                <marker date="1537721685184" expanded="true" signature="470:584" ph="..." />
+                <marker date="1537721697918" expanded="true" signature="138:139" ph="..." />
+                <marker date="1537721697918" expanded="true" signature="472:586" ph="..." />
               </folding>
             </state>
           </provider>
@@ -410,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537713073068</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="prototype 4 ui. remove settings ui components">
+      <created>1537721736387</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1537721736387</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,8 +425,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="28" width="1877" height="1052" extended-state="6" />
-    <editor active="true" />
+    <frame x="43" y="28" width="1877" height="1052" extended-state="7" />
     <layout>
       <window_info content_ui="combo" x="1932" y="28" width="537" height="1052" id="Project" order="0" type="FLOATING" visible="true" weight="0.21940929" />
       <window_info x="2483" y="23" width="534" height="1046" id="Structure" order="1" type="FLOATING" weight="0.25" />
@@ -595,7 +596,8 @@
     <MESSAGE value="Add resource mechanism. Add open and close icons. Update project settings" />
     <MESSAGE value="Add initialization of devices. New settings icons. settings ui changes" />
     <MESSAGE value="initial dialog communication. select device" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial dialog communication. select device" />
+    <MESSAGE value="prototype 4 ui. remove settings ui components" />
+    <option name="LAST_COMMIT_MESSAGE" value="prototype 4 ui. remove settings ui components" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -785,6 +787,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1537713474054" expanded="true" signature="1500:1585" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -802,24 +814,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <marker date="1537713474054" expanded="true" signature="1500:1585" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/settingsdialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="80">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1537721685184" expanded="true" signature="138:139" ph="..." />
-            <marker date="1537721685184" expanded="true" signature="470:584" ph="..." />
+            <marker date="1537721697918" expanded="true" signature="138:139" ph="..." />
+            <marker date="1537721697918" expanded="true" signature="472:586" ph="..." />
           </folding>
         </state>
       </provider>
