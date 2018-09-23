@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '/home/terminux/Documents/Projects/Electro/Resources/settings.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Settings(object):
+    def setupUi(self, Settings):
+        Settings.setObjectName("Settings")
+        Settings.setWindowModality(QtCore.Qt.WindowModal)
+        Settings.resize(452, 388)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Settings)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.groupBox_2 = QtWidgets.QGroupBox(Settings)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.formLayout_2 = QtWidgets.QFormLayout()
+        self.formLayout_2.setObjectName("formLayout_2")
+        self.label_3 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_3.setObjectName("label_3")
+        self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.plottinguicheckbox = QtWidgets.QCheckBox(self.groupBox_2)
+        self.plottinguicheckbox.setText("")
+        self.plottinguicheckbox.setObjectName("plottinguicheckbox")
+        self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.plottinguicheckbox)
+        self.verticalLayout_3.addLayout(self.formLayout_2)
+        self.verticalLayout.addWidget(self.groupBox_2)
+        self.groupBox = QtWidgets.QGroupBox(Settings)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.groupBox.sizePolicy().hasHeightForWidth())
+        self.groupBox.setSizePolicy(sizePolicy)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.formLayout = QtWidgets.QFormLayout()
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtWidgets.QLabel(self.groupBox)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
+        self.usbdevicesdropdown = QtWidgets.QComboBox(self.groupBox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.usbdevicesdropdown.sizePolicy().hasHeightForWidth())
+        self.usbdevicesdropdown.setSizePolicy(sizePolicy)
+        self.usbdevicesdropdown.setFrame(True)
+        self.usbdevicesdropdown.setObjectName("usbdevicesdropdown")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.usbdevicesdropdown)
+        self.label_2 = QtWidgets.QLabel(self.groupBox)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.speedspinbox = QtWidgets.QSpinBox(self.groupBox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.speedspinbox.sizePolicy().hasHeightForWidth())
+        self.speedspinbox.setSizePolicy(sizePolicy)
+        self.speedspinbox.setMinimum(1200)
+        self.speedspinbox.setMaximum(9600)
+        self.speedspinbox.setObjectName("speedspinbox")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.speedspinbox)
+        self.verticalLayout_2.addLayout(self.formLayout)
+        self.verticalLayout.addWidget(self.groupBox)
+        self.buttonBox = QtWidgets.QDialogButtonBox(Settings)
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.verticalLayout.addWidget(self.buttonBox)
+
+        self.retranslateUi(Settings)
+        self.buttonBox.accepted.connect(Settings.accept)
+        self.buttonBox.rejected.connect(Settings.reject)
+        QtCore.QMetaObject.connectSlotsByName(Settings)
+
+    def retranslateUi(self, Settings):
+        _translate = QtCore.QCoreApplication.translate
+        Settings.setWindowTitle(_translate("Settings", "Settings"))
+        self.groupBox_2.setTitle(_translate("Settings", "General"))
+        self.label_3.setText(_translate("Settings", "Show Plotting UI"))
+        self.groupBox.setTitle(_translate("Settings", "USB"))
+        self.label.setText(_translate("Settings", "USB Device"))
+        self.label_2.setText(_translate("Settings", "Speed"))
+
