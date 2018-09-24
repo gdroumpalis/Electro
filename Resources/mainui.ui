@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>497</height>
+    <width>852</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -56,7 +56,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="selecteddevicecombobox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -91,7 +91,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox">
+        <widget class="QSpinBox" name="speedspinbox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -338,21 +338,21 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="addhandlerbutton">
             <property name="text">
              <string>Add Handler</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="removehandlerbutton">
             <property name="text">
              <string>Remove Handler</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="listWidget">
+           <widget class="QListWidget" name="handlerslist">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -366,7 +366,7 @@
         <item>
          <widget class="QFrame" name="frame">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -377,6 +377,64 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Action Type</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -390,7 +448,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>719</width>
+     <width>852</width>
      <height>26</height>
     </rect>
    </property>
@@ -404,12 +462,14 @@
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
-     <string>Proc</string>
+     <string>Electro</string>
     </property>
     <addaction name="actionopen_settings"/>
+    <addaction name="actionRefresh_Devices"/>
+    <addaction name="actionClear_Device_List"/>
    </widget>
    <widget class="QMenu" name="menuPlotting">
     <property name="title">
@@ -431,7 +491,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -447,6 +507,9 @@
    </attribute>
    <addaction name="actionOpen_Plot_File"/>
    <addaction name="actionStart_Plotting"/>
+   <addaction name="actionRefresh_Devices"/>
+   <addaction name="actionClear_Device_List"/>
+   <addaction name="actionPlottings_UI"/>
   </widget>
   <action name="actionOpen_Plot_File">
    <property name="icon">
@@ -468,7 +531,7 @@
   </action>
   <action name="actionopen_settings">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="icon">
     <iconset resource="ElectroRes.qrc">
@@ -478,7 +541,7 @@
     <string>Settings</string>
    </property>
    <property name="visible">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </action>
   <action name="actionStart_Plotting">
@@ -489,8 +552,18 @@
    <property name="text">
     <string>Start Plotting</string>
    </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPlottings_UI">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/plot/Icons/plot.png</normaloff>:/plot/Icons/plot.png</iconset>
+   </property>
    <property name="text">
     <string>Plottings UI (exp)</string>
    </property>
@@ -498,9 +571,44 @@
     <bool>false</bool>
    </property>
   </action>
+  <action name="actionRefresh_Devices">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/refresh/Icons/refresh.png</normaloff>:/refresh/Icons/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh Devices</string>
+   </property>
+  </action>
+  <action name="actionClear_Device_List">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/clear/Icons/clear.png</normaloff>:/clear/Icons/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Device List</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="ElectroRes.qrc"/>
  </resources>
  <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
 </ui>
