@@ -2,8 +2,14 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem,
 import UI.mainui
 from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
-from subprocess import check_call
+from subprocess import check_call, call
 import os
+
+
+# TODO And argument to stat electro to know if it run on raspbery
+# TODO test renderer with timer
+# TODO disable filename when file loging is off
+# TODO See What is going on with Handlers
 
 
 class MainUI(QMainWindow):
@@ -35,10 +41,10 @@ class MainUI(QMainWindow):
         connect(self.ui.actionClear_Device_List.triggered, self.fillcombowithnone)
         connect(self.ui.filepathtoolbutton.clicked, self.selectfilepath)
         connect(self.ui.filepathtoolbutton_2.clicked, self.selecteddevice2)
-        connect(self.ui.customnamecheckbox.clicked , self.setcustomfilenameenabled)
-        connect(self.ui.customnamecheckbox_2.clicked , self.setcustomfilenameenabled2)
-        connect(self.ui.actionStart_Plotting.triggered,self.startplotting)
-        connect(self.ui.filecheckbox.clicked,self.setfilepathenabled)
+        connect(self.ui.customnamecheckbox.clicked, self.setcustomfilenameenabled)
+        connect(self.ui.customnamecheckbox_2.clicked, self.setcustomfilenameenabled2)
+        connect(self.ui.actionStart_Plotting.triggered, self.startplotting)
+        connect(self.ui.filecheckbox.clicked, self.setfilepathenabled)
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -120,11 +126,15 @@ class MainUI(QMainWindow):
             print("error")
 
     def startliveplotting(self):
-        print("live plotting")
+        # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
+        #TODO finish implementation off plotting. See whats going on with arguments
+        call(["python35", "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
+              self.ui.speedspinbox.text(), self.ui.filename.text()])
 
     def startsampling(self):
-        print("sampling")
+        # TODO Implement sampling function
+        pass
 
     def startmonitoring(self):
-        print("monitoring")
-
+        # TODO implement monitoring.. this is affected by handlers.
+        pass
