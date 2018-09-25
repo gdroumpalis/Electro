@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem, QMessageBox, QFileDialog
 import UI.mainui
 from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
@@ -16,6 +16,13 @@ class MainUI(QMainWindow):
         self.initializeelectro()
         self.connectuicomponetstosignal()
         self.attachkeyboardshortcuts()
+        self.initializewidgets()
+
+    def initializewidgets(self):
+        self.ui.customnamecheckbox.setChecked(False)
+        self.ui.filename.setEnabled(False)
+        self.ui.customnamecheckbox_2.setChecked(False)
+        self.ui.filename2.setEnabled(False)
 
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
@@ -24,7 +31,10 @@ class MainUI(QMainWindow):
         connect(self.ui.removehandlerbutton.clicked, self.removehandler)
         connect(self.ui.actionRefresh_Devices.triggered, self.initializeelectro)
         connect(self.ui.actionClear_Device_List.triggered, self.fillcombowithnone)
-
+        connect(self.ui.filepathtoolbutton.clicked, self.selectfilepath)
+        connect(self.ui.filepathtoolbutton_2.clicked, self.selecteddevice2)
+        connect(self.ui.customnamecheckbox.clicked , self.setcustomfilenameenabled)
+        connect(self.ui.customnamecheckbox_2.clicked , self.setcustomfilenameenabled2)
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
         self.ui.actionopen_settings.setShortcut("ctrl+p")
@@ -76,3 +86,15 @@ class MainUI(QMainWindow):
         # mb.setText(self.ui.handlerslist.currentItem().Metallica)
         # mb.exec_()
         pass
+
+    def selectfilepath(self):
+        self.ui.filepathlineedit.setText(str(QFileDialog.getExistingDirectory(self, "Select Save path")))
+
+    def selecteddevice2(self):
+        self.ui.filepathlineedit_2.setText(str(QFileDialog.getExistingDirectory(self, "Select Save path")))
+
+    def setcustomfilenameenabled2(self):
+        self.ui.filename2.setEnabled(self.ui.customnamecheckbox_2.isChecked())
+
+    def setcustomfilenameenabled(self):
+        self.ui.filename.setEnabled(self.ui.customnamecheckbox.isChecked())
