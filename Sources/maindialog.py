@@ -23,6 +23,8 @@ class MainUI(QMainWindow):
         self.ui.filename.setEnabled(False)
         self.ui.customnamecheckbox_2.setChecked(False)
         self.ui.filename2.setEnabled(False)
+        self.ui.filepathlineedit.setEnabled(False)
+        self.ui.filepathtoolbutton.setEnabled(False)
 
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
@@ -35,6 +37,9 @@ class MainUI(QMainWindow):
         connect(self.ui.filepathtoolbutton_2.clicked, self.selecteddevice2)
         connect(self.ui.customnamecheckbox.clicked , self.setcustomfilenameenabled)
         connect(self.ui.customnamecheckbox_2.clicked , self.setcustomfilenameenabled2)
+        connect(self.ui.actionStart_Plotting.triggered,self.startplotting)
+        connect(self.ui.filecheckbox.clicked,self.setfilepathenabled)
+
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
         self.ui.actionopen_settings.setShortcut("ctrl+p")
@@ -98,3 +103,28 @@ class MainUI(QMainWindow):
 
     def setcustomfilenameenabled(self):
         self.ui.filename.setEnabled(self.ui.customnamecheckbox.isChecked())
+
+    def setfilepathenabled(self):
+        self.ui.filepathlineedit.setEnabled(self.ui.filecheckbox.isChecked())
+        self.ui.filepathtoolbutton.setEnabled(self.ui.filecheckbox.isChecked())
+
+    def startplotting(self):
+        selectedtab = self.ui.tabWidget.currentWidget()
+        if selectedtab is self.ui.liveplottingtab:
+            self.startliveplotting()
+        elif selectedtab is self.ui.samplingtab:
+            self.startsampling()
+        elif selectedtab is self.ui.handlerslist:
+            self.startmonitoring()
+        else:
+            print("error")
+
+    def startliveplotting(self):
+        print("live plotting")
+
+    def startsampling(self):
+        print("sampling")
+
+    def startmonitoring(self):
+        print("monitoring")
+

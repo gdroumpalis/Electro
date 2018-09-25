@@ -3,9 +3,11 @@ from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg
 import serial
 import datetime
+import sys
+
 # Create object serial port
-portName = "/dev/ttyUSB0"                      # replace this port name by yours!
-baudrate = 1200
+portName = sys.argv[1]                      # replace this port name by yours!
+baudrate = sys.argv[2]
 ser = serial.Serial(portName,baudrate)
 
 ### START QtApp #####
