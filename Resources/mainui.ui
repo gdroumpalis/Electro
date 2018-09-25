@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>497</height>
+    <width>852</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -56,7 +56,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="selecteddevicecombobox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -91,7 +91,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox">
+        <widget class="QSpinBox" name="speedspinbox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -111,6 +111,9 @@
     </item>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -127,81 +130,72 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <widget class="QCheckBox" name="liveplottingcheckbox">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>111</width>
-             <height>24</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Live Plotting</string>
-           </property>
-          </widget>
-          <widget class="QCheckBox" name="loggingcheckbox">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>10</y>
-             <width>96</width>
-             <height>24</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Logging</string>
-           </property>
-          </widget>
-          <widget class="QCheckBox" name="filecheckbox">
-           <property name="geometry">
-            <rect>
-             <x>230</x>
-             <y>10</y>
-             <width>131</width>
-             <height>24</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>File Recording</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_3">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>47</y>
-             <width>131</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Filepath Recording</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="filepathlineedit">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>40</y>
-             <width>171</width>
-             <height>34</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QToolButton" name="filepathtoolbutton">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>40</y>
-             <width>36</width>
-             <height>34</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-          </widget>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_10">
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="liveplottingcheckbox">
+                 <property name="text">
+                  <string>Live Plotting</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QCheckBox" name="loggingcheckbox">
+                 <property name="text">
+                  <string>Logging</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QCheckBox" name="filecheckbox">
+                 <property name="text">
+                  <string>File Recording</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Filepath Recording</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="filepathlineedit"/>
+               </item>
+               <item row="0" column="2">
+                <widget class="QToolButton" name="filepathtoolbutton">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="2" column="0">
+              <layout class="QGridLayout" name="gridLayout_9">
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="customnamecheckbox">
+                 <property name="text">
+                  <string>Custom name</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="filename"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -219,118 +213,153 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <widget class="QLineEdit" name="filepathlineedit_2">
+          <widget class="QWidget" name="">
            <property name="geometry">
             <rect>
-             <x>150</x>
-             <y>53</y>
-             <width>271</width>
-             <height>34</height>
+             <x>12</x>
+             <y>14</y>
+             <width>314</width>
+             <height>152</height>
             </rect>
            </property>
-          </widget>
-          <widget class="QToolButton" name="filepathtoolbutton_2">
-           <property name="geometry">
-            <rect>
-             <x>420</x>
-             <y>53</y>
-             <width>36</width>
-             <height>34</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_4">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>60</y>
-             <width>131</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Filepath Recording</string>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_2">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>10</y>
-             <width>104</width>
-             <height>34</height>
-            </rect>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::NoButtons</enum>
-           </property>
-           <property name="maximum">
-            <number>0</number>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_3">
-           <property name="geometry">
-            <rect>
-             <x>333</x>
-             <y>10</y>
-             <width>121</width>
-             <height>34</height>
-            </rect>
-           </property>
-           <property name="minimum">
-            <number>200</number>
-           </property>
-           <property name="maximum">
-            <number>5000</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_5">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>20</y>
-             <width>65</width>
-             <height>18</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>From</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_6">
-           <property name="geometry">
-            <rect>
-             <x>310</x>
-             <y>18</y>
-             <width>41</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>To</string>
-           </property>
-          </widget>
-          <widget class="QCheckBox" name="autoopenfilecheckbox">
-           <property name="geometry">
-            <rect>
-             <x>15</x>
-             <y>97</y>
-             <width>111</width>
-             <height>24</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Auto Open</string>
-           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>From</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSpinBox" name="spinBox_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="maximum">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>To</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSpinBox" name="spinBox_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="minimum">
+                   <number>200</number>
+                  </property>
+                  <property name="maximum">
+                   <number>5000</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Filepath Recording</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLineEdit" name="filepathlineedit_2"/>
+              </item>
+              <item>
+               <widget class="QToolButton" name="filepathtoolbutton_2">
+                <property name="text">
+                 <string>...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="customnamecheckbox_2">
+              <property name="text">
+               <string>Custom Name</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="filename2"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="autoopenfilecheckbox">
+              <property name="text">
+               <string>Auto Open</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>Handlers</string>
        </attribute>
@@ -338,21 +367,21 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="addhandlerbutton">
             <property name="text">
              <string>Add Handler</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="removehandlerbutton">
             <property name="text">
              <string>Remove Handler</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="listWidget">
+           <widget class="QListWidget" name="handlerslist">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -366,7 +395,7 @@
         <item>
          <widget class="QFrame" name="frame">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -377,6 +406,64 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Action Type</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -390,7 +477,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>719</width>
+     <width>852</width>
      <height>26</height>
     </rect>
    </property>
@@ -404,12 +491,14 @@
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
-     <string>Proc</string>
+     <string>Electro</string>
     </property>
     <addaction name="actionopen_settings"/>
+    <addaction name="actionRefresh_Devices"/>
+    <addaction name="actionClear_Device_List"/>
    </widget>
    <widget class="QMenu" name="menuPlotting">
     <property name="title">
@@ -431,7 +520,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -447,6 +536,9 @@
    </attribute>
    <addaction name="actionOpen_Plot_File"/>
    <addaction name="actionStart_Plotting"/>
+   <addaction name="actionRefresh_Devices"/>
+   <addaction name="actionClear_Device_List"/>
+   <addaction name="actionPlottings_UI"/>
   </widget>
   <action name="actionOpen_Plot_File">
    <property name="icon">
@@ -468,7 +560,7 @@
   </action>
   <action name="actionopen_settings">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="icon">
     <iconset resource="ElectroRes.qrc">
@@ -478,7 +570,7 @@
     <string>Settings</string>
    </property>
    <property name="visible">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </action>
   <action name="actionStart_Plotting">
@@ -489,8 +581,18 @@
    <property name="text">
     <string>Start Plotting</string>
    </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPlottings_UI">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/plot/Icons/plot.png</normaloff>:/plot/Icons/plot.png</iconset>
+   </property>
    <property name="text">
     <string>Plottings UI (exp)</string>
    </property>
@@ -498,9 +600,44 @@
     <bool>false</bool>
    </property>
   </action>
+  <action name="actionRefresh_Devices">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/refresh/Icons/refresh.png</normaloff>:/refresh/Icons/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh Devices</string>
+   </property>
+  </action>
+  <action name="actionClear_Device_List">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/clear/Icons/clear.png</normaloff>:/clear/Icons/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Device List</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="ElectroRes.qrc"/>
  </resources>
  <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
 </ui>
