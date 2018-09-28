@@ -5,7 +5,8 @@ from Sources.settingsdialog import SettingUI
 from subprocess import check_call, call
 import os
 
-# TODO And argument to stat electro to know if it run on raspbery. What else do we need??
+
+# TODO And argument to stat electro to know if it run on raspbery(done - see for readonly). What else do we need??
 # TODO test renderer with timer
 # TODO disable filename when file loging is off
 # TODO See What is going on with Handlers
@@ -22,7 +23,6 @@ class MainUI(QMainWindow):
         super().__init__()
         self.ui = UI.mainui.Ui_MainWindow()
         MainUI.RunsOnRaspberry = rasp
-        self.selecteddevice = None
         self.ui.setupUi(self)
         self.initializeelectro()
         self.connectuicomponetstosignal()
@@ -126,21 +126,25 @@ class MainUI(QMainWindow):
         self.ui.filename.setEnabled(self.ui.filecheckbox.isChecked() and self.ui.customnamecheckbox.isChecked())
 
     def startplotting(self):
-        selectedtab = self.ui.tabWidget.currentWidget()
-        if selectedtab is self.ui.liveplottingtab:
-            self.startliveplotting()
-        elif selectedtab is self.ui.samplingtab:
-            self.startsampling()
-        elif selectedtab is self.ui.handlerslist:
-            self.startmonitoring()
+        if self.ui.selecteddevicecombobox.findText("None"):
+            selectedtab = self.ui.tabWidget.currentWidget()
+            if selectedtab is self.ui.liveplottingtab:
+                self.startliveplotting()
+            elif selectedtab is self.ui.samplingtab:
+                self.startsampling()
+            elif selectedtab is self.ui.handlerslist:
+                self.startmonitoring()
+            else:
+                print("unknown tab selected")
         else:
-            print("error")
+            self.showmessagebox("There is no proper device selected")
 
     def startliveplotting(self):
         # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
         # TODO finish implementation off plotting. See whats going on with arguments
-        call(["python35", "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
-              self.ui.speedspinbox.text(), self.ui.filename.text()])
+        if self.ui.loggingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():#todo check if this is right
+            call([self.getpythonversion(), "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
+                  self.ui.speedspinbox.text(), self.ui.filename.text()])
 
     def startsampling(self):
         # TODO Implement sampling function
@@ -149,3 +153,15 @@ class MainUI(QMainWindow):
     def startmonitoring(self):
         # TODO implement monitoring.. this is affected by handlers.
         pass
+
+    def getpythonversion(self) -> str:
+        if MainUI.RunsOnRaspberry:
+            return "python3"
+        else:
+            return "python35"
+
+    def showmessagebox(self, message):
+        msg = QMessageBox()
+        msg.setText(message)
+        msg.setIcon(QMessageBox.Information)
+        msg.exec_()

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="init" value="6" />
-          <entry key="py" value="99" />
+          <entry key="py" value="103" />
           <entry key="qrc" value="1" />
           <entry key="settings" value="1" />
           <entry key="tets" value="1" />
@@ -42,7 +42,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="105" />
+          <entry key="Python" value="109" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -54,14 +54,14 @@
           <entry key="dummy" value="71" />
           <entry key="gitignore" value="31" />
           <entry key="init" value="366" />
-          <entry key="py" value="8542" />
-          <entry key="txt" value="749" />
+          <entry key="py" value="9062" />
+          <entry key="txt" value="845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="851" />
-          <entry key="Python" value="8988" />
+          <entry key="PLAIN_TEXT" value="947" />
+          <entry key="Python" value="9508" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -81,13 +81,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="125" column="111" selection-start-line="125" selection-start-column="111" selection-end-line="125" selection-end-column="111" />
+            <state relative-caret-position="328">
+              <caret line="144" column="150" selection-start-line="144" selection-start-column="150" selection-end-line="144" selection-end-column="150" />
               <folding>
                 <element signature="e#0#105#0" expanded="true" />
-                <marker date="1538174630922" expanded="true" signature="941:946" ph="..." />
-                <marker date="1538174630922" expanded="true" signature="4657:5014" ph="..." />
+                <marker date="1538177785173" expanded="true" signature="932:937" ph="..." />
+                <marker date="1538177785173" expanded="true" signature="4648:5005" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="282" column="31" lean-forward="true" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -95,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="320">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -108,9 +126,16 @@
         <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
             </state>
           </provider>
         </entry>
@@ -121,6 +146,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -157,6 +183,7 @@
         <option value="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" />
         <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
         <option value="$PROJECT_DIR$/init" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/Sources/maindialog.py" />
       </list>
     </option>
@@ -220,6 +247,12 @@
             <path>
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Sources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -229,8 +262,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;initi&#9;null&#9;null&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/mainui.py" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="SearchEverywhereHistoryKey" value="mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;initi&#9;null&#9;null&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/mainui.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -452,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537902507663</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery">
+      <created>1538174744517</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1538174744517</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -475,7 +515,7 @@
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3286334" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.42594594" />
+      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.4251627" />
       <window_info anchor="bottom" auto_hide="true" x="1957" y="632" width="1863" height="407" id="Run" order="5" sideWeight="0.4975715" weight="0.3286334" />
       <window_info active="true" anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
@@ -642,18 +682,8 @@
     <MESSAGE value="Add resources. Some ui implementation. Listview research." />
     <MESSAGE value="tab cases. disable ui component when they are not needed" />
     <MESSAGE value="Add todos. Add testing impl of live plottings. Not yet tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add todos. Add testing impl of live plottings. Not yet tested" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
-          <line>138</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -664,6 +694,31 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self.ui.selecteddevicecombobox.count()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;None&quot; in self.ui.selecteddevicecombobox.count()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;None&quot; in self.ui.selecteddevicecombobox.children()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.ui.selecteddevicecombobox.children()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.getpythonversion()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>MainUI.RunsOnRaspberry</expression-string>
         <language-id>Python</language-id>
@@ -681,31 +736,6 @@
       </expression>
       <expression>
         <expression-string>sys.argv</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getinitarguments()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>MainUI.RunsOnRaspberry(self)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>MainUI.RunsOnRaspberry()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>MainUI.runsonraspberry</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>maindialog.py</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -884,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="1652" column="23" lean-forward="true" selection-start-line="1652" selection-start-column="23" selection-end-line="1652" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/initialrenderer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -898,33 +921,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="754">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="282" column="31" lean-forward="true" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="125" column="111" selection-start-line="125" selection-start-column="111" selection-end-line="125" selection-end-column="111" />
+        <state relative-caret-position="328">
+          <caret line="144" column="150" selection-start-line="144" selection-start-column="150" selection-end-line="144" selection-end-column="150" />
           <folding>
             <element signature="e#0#105#0" expanded="true" />
-            <marker date="1538174630922" expanded="true" signature="941:946" ph="..." />
-            <marker date="1538174630922" expanded="true" signature="4657:5014" ph="..." />
+            <marker date="1538177785173" expanded="true" signature="932:937" ph="..." />
+            <marker date="1538177785173" expanded="true" signature="4648:5005" ph="..." />
           </folding>
         </state>
       </provider>
