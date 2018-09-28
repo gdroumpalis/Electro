@@ -1,3 +1,4 @@
+from PyQt5.QtCore import QSize
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem, QMessageBox, QFileDialog
 import UI.mainui
 from Utilities.GlobalUtilities import *
@@ -24,10 +25,15 @@ class MainUI(QMainWindow):
         self.ui = UI.mainui.Ui_MainWindow()
         MainUI.RunsOnRaspberry = rasp
         self.ui.setupUi(self)
+        self.initializeMainWindowSize()
         self.initializeelectro()
         self.connectuicomponetstosignal()
         self.attachkeyboardshortcuts()
         self.initializewidgets()
+
+    def initializeMainWindowSize(self):
+        if not MainUI.RunsOnRaspberry:
+            self.resize(QSize(1600, 900))
 
     def initializewidgets(self):
         self.ui.customnamecheckbox.setChecked(False)
@@ -142,7 +148,7 @@ class MainUI(QMainWindow):
     def startliveplotting(self):
         # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
         # TODO finish implementation off plotting. See whats going on with arguments
-        if self.ui.loggingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():#todo check if this is right
+        if self.ui.loggingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
             call([self.getpythonversion(), "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
                   self.ui.speedspinbox.text(), self.ui.filename.text()])
 

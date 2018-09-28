@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
@@ -30,6 +29,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="f2py" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="init" value="6" />
           <entry key="py" value="103" />
@@ -42,7 +42,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="109" />
+          <entry key="Python" value="110" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -54,14 +54,14 @@
           <entry key="dummy" value="71" />
           <entry key="gitignore" value="31" />
           <entry key="init" value="366" />
-          <entry key="py" value="9062" />
-          <entry key="txt" value="845" />
+          <entry key="py" value="9201" />
+          <entry key="txt" value="926" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="947" />
-          <entry key="Python" value="9508" />
+          <entry key="PLAIN_TEXT" value="1028" />
+          <entry key="Python" value="9647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -81,12 +81,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="144" column="150" selection-start-line="144" selection-start-column="150" selection-end-line="144" selection-end-column="150" />
+            <state relative-caret-position="308">
+              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
               <folding>
-                <element signature="e#0#105#0" expanded="true" />
-                <marker date="1538177785173" expanded="true" signature="932:937" ph="..." />
-                <marker date="1538177785173" expanded="true" signature="4648:5005" ph="..." />
+                <element signature="e#0#30#0" expanded="true" />
+                <marker date="1538178281403" expanded="true" signature="1043:1130" ph="..." />
+                <marker date="1538178281403" expanded="true" signature="1125:1130" ph="..." />
+                <marker date="1538178281403" expanded="true" signature="4841:5198" ph="..." />
               </folding>
             </state>
           </provider>
@@ -305,7 +306,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init.py" />
-      <option name="PARAMETERS" value="rasp" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -492,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538174744517</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="check if proper device is selected check if any of the checkboxes are selected">
+      <created>1538177846786</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1538177846786</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -683,7 +691,8 @@
     <MESSAGE value="tab cases. disable ui component when they are not needed" />
     <MESSAGE value="Add todos. Add testing impl of live plottings. Not yet tested" />
     <MESSAGE value="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery" />
+    <MESSAGE value="check if proper device is selected check if any of the checkboxes are selected" />
+    <option name="LAST_COMMIT_MESSAGE" value="check if proper device is selected check if any of the checkboxes are selected" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -966,14 +975,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bin/f2py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="144" column="150" selection-start-line="144" selection-start-column="150" selection-end-line="144" selection-end-column="150" />
+        <state relative-caret-position="308">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
           <folding>
-            <element signature="e#0#105#0" expanded="true" />
-            <marker date="1538177785173" expanded="true" signature="932:937" ph="..." />
-            <marker date="1538177785173" expanded="true" signature="4648:5005" ph="..." />
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1538178281403" expanded="true" signature="1043:1130" ph="..." />
+            <marker date="1538178281403" expanded="true" signature="1125:1130" ph="..." />
+            <marker date="1538178281403" expanded="true" signature="4841:5198" ph="..." />
           </folding>
         </state>
       </provider>
