@@ -7,9 +7,8 @@ from subprocess import check_call, call
 import os
 
 
-# TODO And argument to stat electro to know if it run on raspbery(done - see for readonly). What else do we need??
+# TODO See if RunsOnRaspberry could be readonly
 # TODO test renderer with timer
-# TODO disable filename when file loging is off
 # TODO See What is going on with Handlers
 
 
