@@ -5,19 +5,24 @@ from Sources.settingsdialog import SettingUI
 from subprocess import check_call, call
 import os
 
-
-# TODO And argument to stat electro to know if it run on raspbery
+# TODO And argument to stat electro to know if it run on raspbery. What else do we need??
 # TODO test renderer with timer
 # TODO disable filename when file loging is off
 # TODO See What is going on with Handlers
 
 
 class MainUI(QMainWindow):
+    RunsOnRaspberry = False
 
-    def __init__(self):
+    def __init__(self, rasp):
+        """
+
+        :type runsonraspberry: bool
+        """
         super().__init__()
-        self.selecteddevice = None
         self.ui = UI.mainui.Ui_MainWindow()
+        MainUI.RunsOnRaspberry = rasp
+        self.selecteddevice = None
         self.ui.setupUi(self)
         self.initializeelectro()
         self.connectuicomponetstosignal()
@@ -31,6 +36,7 @@ class MainUI(QMainWindow):
         self.ui.filename2.setEnabled(False)
         self.ui.filepathlineedit.setEnabled(False)
         self.ui.filepathtoolbutton.setEnabled(False)
+        self.ui.customnamecheckbox.setEnabled(False)
 
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
@@ -70,7 +76,10 @@ class MainUI(QMainWindow):
             self.fillcombowithnone()
 
     def deviceaddtocombo(self, dev):
-        self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
+        if MainUI.RunsOnRaspberry:
+            self.ui.selecteddevicecombobox.addItem(dev.replace("\n"))
+        else:
+            self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
 
     def fillcombowithnone(self):
         self.clearcombo()
@@ -108,11 +117,13 @@ class MainUI(QMainWindow):
         self.ui.filename2.setEnabled(self.ui.customnamecheckbox_2.isChecked())
 
     def setcustomfilenameenabled(self):
-        self.ui.filename.setEnabled(self.ui.customnamecheckbox.isChecked())
+        self.ui.filename.setEnabled(self.ui.customnamecheckbox.isChecked() & self.ui.filecheckbox.isChecked())
 
     def setfilepathenabled(self):
         self.ui.filepathlineedit.setEnabled(self.ui.filecheckbox.isChecked())
         self.ui.filepathtoolbutton.setEnabled(self.ui.filecheckbox.isChecked())
+        self.ui.customnamecheckbox.setEnabled(self.ui.filecheckbox.isChecked())
+        self.ui.filename.setEnabled(self.ui.filecheckbox.isChecked() and self.ui.customnamecheckbox.isChecked())
 
     def startplotting(self):
         selectedtab = self.ui.tabWidget.currentWidget()
@@ -127,7 +138,7 @@ class MainUI(QMainWindow):
 
     def startliveplotting(self):
         # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
-        #TODO finish implementation off plotting. See whats going on with arguments
+        # TODO finish implementation off plotting. See whats going on with arguments
         call(["python35", "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
               self.ui.speedspinbox.text(), self.ui.filename.text()])
 

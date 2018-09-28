@@ -4,8 +4,14 @@ from PyQt5.QtWidgets import QApplication
 
 from Sources.maindialog import MainUI
 
+def getinitarguments() -> bool:
+    if len(sys.argv) > 1 and "rasp" in sys.argv:
+        return True
+    else:
+        return False
+test = False
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = MainUI()
+    ex = MainUI(getinitarguments())
     ex.show()
     sys.exit(app.exec_())
