@@ -1,5 +1,5 @@
 import sys
-
+import pathlib
 from PyQt5.QtWidgets import QApplication
 
 from Sources.maindialog import MainUI
@@ -9,9 +9,9 @@ def getinitarguments() -> bool:
         return True
     else:
         return False
-test = False
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = MainUI(getinitarguments())
+    ex = MainUI(getinitarguments(), str(pathlib.Path(__file__).parent))
     ex.show()
     sys.exit(app.exec_())

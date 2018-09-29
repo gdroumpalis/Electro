@@ -7,6 +7,11 @@ from subprocess import check_call, call
 import os
 
 
+class RendererOperationsType(Enum):
+    LivePlotting =1
+    Sampling = 2
+    Handling = 3
+
 # TODO See if RunsOnRaspberry could be readonly
 # TODO test renderer with timer
 # TODO See What is going on with Handlers
@@ -15,12 +20,13 @@ import os
 class MainUI(QMainWindow):
     RunsOnRaspberry = False
 
-    def __init__(self, rasp):
+    def __init__(self, rasp , initfilepath):
         """
 
         :type runsonraspberry: bool
         """
         super().__init__()
+        self.initfilepath = initfilepath
         self.ui = UI.mainui.Ui_MainWindow()
         MainUI.RunsOnRaspberry = rasp
         self.ui.setupUi(self)
@@ -165,9 +171,11 @@ class MainUI(QMainWindow):
     def startliveplotting(self):
         # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
         # TODO finish implementation off plotting. See whats going on with arguments
-        if self.ui.loggingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
-            call([self.getpythonversion(), "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
-                  self.ui.speedspinbox.text(), self.ui.filename.text()])
+        if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
+            print(__file__)
+            call([self.getpythonversion(), os.path.join(self.initfilepath,"Renderer/MRenderer.py"),
+                  str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
+                  self.ui.speedspinbox.text(), self.ui.filename.text(), str(1000)])
 
     def startsampling(self):
         # TODO Implement sampling function
@@ -199,8 +207,7 @@ class MainUI(QMainWindow):
         elif selectedtab is self.ui.samplingtab:
             self.initializesamplingtab()
         elif selectedtab is self.ui.handlerslist:
-            #TODO clear handler tab
+            # TODO clear handler tab
             pass
         else:
             print("unknown tab selected")
-
