@@ -71,22 +71,26 @@ ptr = 1  # set first x position
 
 
 # Realtime data plot. Each time this function is called, the data display is updated
-def updateforliveplottin(f):
+def updateforliveplottin(f, logging):
+    """
+    :type logging: bool
+    """
     global curve, curve2, ptr, Xm, Am
     Xm[:-1] = Xm[1:]  # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()  # read line (single value) from the serial port
     try:
         Xm[-1] = float(value)  # vector containing the instantaneous values
-    except:
+    except :
         Xm[-1] = 0.0
 
     if ptr <= 500:
         Am[-1] = sum(Xm) / ptr
     else:
         Am[-1] = sum(Xm) / len(Xm)
-    print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
-    f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+    if logging:
+        print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
+    # f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
     ptr += 1  # update x position for displaying the curve
     curve.setData(Xm)  # set the curve with this data
     curve.setPos(ptr, 1)  # set x position in the graph to 0
@@ -127,7 +131,7 @@ def updateforhandling(f):
     else:
         Am[-1] = sum(Xm) / len(Xm)
     print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
-    f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+    #f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
     ptr += 1  # update x position for displaying the curve
     curve.setData(Xm)  # set the curve with this data
     curve.setPos(ptr, 1)  # set x position in the graph to 0
@@ -137,15 +141,15 @@ def updateforhandling(f):
 
 
 if RendererOperation == RendererOperationsType.LivePlotting:
-    timer.timeout.connect(lambda: updateforhandling(filename))
-    timer.start(700)
+    timer.timeout.connect(lambda: updateforliveplottin(filename,True))
+    timer.start(0)
+    print("Plotting Started")
 elif RendererOperation == RendererOperationsType.Sampling:
     step = 0
     timer.timeout.connect(lambda: updateforsampling(filename, step))
     timer.setInterval(700)
     timer.start(0)
-    if step == maxstep:
-        timer.stop()
+
 elif RendererOperation == RendererOperationsType.Handling:
     timer.timeout.connect(lambda: updateforhandling(filename))
     timer.setInterval(700)
@@ -155,3 +159,4 @@ else:
 
 if __name__ == '__main__':
     pg.QtGui.QApplication.exec_()
+    print("Proccess Ended")
