@@ -46,9 +46,18 @@ def GetDefaultMaxStep(argv):
     else:
         return int(argv[5])
 
+def GetFileLogging(argv):
+    if argv[6] == "None":
+        return False
+    else:
+        if argv[6] == "True":
+            return True
+        else:
+            return False
+
 
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
-
+filelogging = GetFileLogging(sys.argv)
 devicename = GetDeviceName(sys.argv)
 baudrate = GetBaudrate(sys.argv)
 filename = GetDefaultFilepath(sys.argv)
@@ -141,7 +150,7 @@ def updateforhandling(f):
 
 
 if RendererOperation == RendererOperationsType.LivePlotting:
-    timer.timeout.connect(lambda: updateforliveplottin(filename,True))
+    timer.timeout.connect(lambda: updateforliveplottin(filename,filelogging))
     timer.start(0)
     print("Plotting Started")
 elif RendererOperation == RendererOperationsType.Sampling:

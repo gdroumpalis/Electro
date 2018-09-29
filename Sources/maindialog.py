@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem,
 import UI.mainui
 from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
-from subprocess import check_call, call
+from subprocess import check_call, call , Popen
 import os
 
 
@@ -173,9 +173,9 @@ class MainUI(QMainWindow):
         # TODO finish implementation off plotting. See whats going on with arguments
         if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
             print(__file__)
-            call([self.getpythonversion(), os.path.join(self.initfilepath,"Renderer/MRenderer.py"),
+            Popen([self.getpythonversion(), os.path.join(self.initfilepath,"Renderer/MRenderer.py"),
                   str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
-                  self.ui.speedspinbox.text(), self.ui.filename.text(), str(1000)])
+                  self.ui.speedspinbox.text(), self.ui.filename.text(), "None" ,str(self.ui.loggingcheckbox.isChecked())])
 
     def startsampling(self):
         # TODO Implement sampling function
