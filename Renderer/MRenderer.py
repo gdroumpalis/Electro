@@ -46,7 +46,7 @@ def GetDefaultMaxStep(argv):
     else:
         return int(argv[5])
 
-def GetFileLogging(argv):
+def GetTerminalLogging(argv):
     if argv[6] == "None":
         return False
     else:
@@ -54,9 +54,17 @@ def GetFileLogging(argv):
             return True
         else:
             return False
-
+def GetFileLogging(argv):
+    if argv[7] == "None":
+        return False
+    else:
+        if argv[7] == "True":
+            return True
+        else:
+            return False
 
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
+terminallogging = GetTerminalLogging(sys.argv)
 filelogging = GetFileLogging(sys.argv)
 devicename = GetDeviceName(sys.argv)
 baudrate = GetBaudrate(sys.argv)
@@ -80,7 +88,7 @@ ptr = 1  # set first x position
 
 
 # Realtime data plot. Each time this function is called, the data display is updated
-def updateforliveplottin(f, logging):
+def updateforliveplottin(f, logging , filelogging):
     """
     :type logging: bool
     """
@@ -99,7 +107,10 @@ def updateforliveplottin(f, logging):
         Am[-1] = sum(Xm) / len(Xm)
     if logging:
         print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
-    # f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+
+    if filelogging:
+        f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+
     ptr += 1  # update x position for displaying the curve
     curve.setData(Xm)  # set the curve with this data
     curve.setPos(ptr, 1)  # set x position in the graph to 0
@@ -150,9 +161,11 @@ def updateforhandling(f):
 
 
 if RendererOperation == RendererOperationsType.LivePlotting:
-    timer.timeout.connect(lambda: updateforliveplottin(filename,filelogging))
+    #TODO create file and open it. Then give it to update method
+    timer.timeout.connect(lambda: updateforliveplottin(filename, terminallogging , filelogging))
     timer.start(0)
     print("Plotting Started")
+    print(filename)
 elif RendererOperation == RendererOperationsType.Sampling:
     step = 0
     timer.timeout.connect(lambda: updateforsampling(filename, step))

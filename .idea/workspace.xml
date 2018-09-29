@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
@@ -50,17 +49,17 @@
           <entry key="" value="57" />
           <entry key="&quot;&quot;" value="5" />
           <entry key="Python Console" value="75" />
-          <entry key="dummy" value="83" />
+          <entry key="dummy" value="94" />
           <entry key="gitignore" value="60" />
           <entry key="init" value="366" />
-          <entry key="py" value="12097" />
-          <entry key="txt" value="1221" />
+          <entry key="py" value="12294" />
+          <entry key="txt" value="1297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1364" />
-          <entry key="Python" value="12600" />
+          <entry key="PLAIN_TEXT" value="1451" />
+          <entry key="Python" value="12797" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -82,11 +81,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="177" column="83" selection-start-line="177" selection-start-column="83" selection-end-line="177" selection-end-column="83" />
+                <state relative-caret-position="-39">
+                  <caret line="179" column="85" selection-start-line="179" selection-start-column="85" selection-end-line="179" selection-end-column="85" />
                   <folding>
                     <element signature="e#0#30#0" expanded="true" />
-                    <marker date="1538255989350" expanded="true" signature="6632:6641" ph="..." />
+                    <marker date="1538256266092" expanded="true" signature="6632:6641" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -96,7 +95,7 @@
             <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="248">
-                  <caret line="145" column="60" lean-forward="true" selection-start-line="145" selection-start-column="60" selection-end-line="145" selection-end-column="60" />
+                  <caret line="156" column="60" lean-forward="true" selection-start-line="156" selection-start-column="60" selection-end-line="156" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -111,11 +110,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="156" column="12" lean-forward="true" selection-start-line="156" selection-start-column="12" selection-end-line="156" selection-end-column="12" />
+                <state relative-caret-position="101">
+                  <caret line="163" column="64" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1538255876723" expanded="true" signature="972:1125" ph="..." />
+                    <marker date="1538256499987" expanded="true" signature="1152:1304" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -167,8 +166,8 @@
         <option value="$PROJECT_DIR$/init.py" />
         <option value="$PROJECT_DIR$/Utilities/GlobalUtilities.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
         <option value="$PROJECT_DIR$/Sources/maindialog.py" />
+        <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
       </list>
     </option>
   </component>
@@ -533,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538255498342</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="enable logging from ui. This is correct.&#10;Change to popen for non blocking ui">
+      <created>1538256059392</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1538256059392</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -730,34 +736,35 @@
     <MESSAGE value="clear all tabs command&#10;clear selected tab command" />
     <MESSAGE value="start communication with renderer.&#10;not proper operations.&#10;triple method Renderer" />
     <MESSAGE value="first start liveplotting. Success.&#10;Correct string to float conversion exception. Now starts automaticaly" />
-    <option name="LAST_COMMIT_MESSAGE" value="first start liveplotting. Success.&#10;Correct string to float conversion exception. Now starts automaticaly" />
+    <MESSAGE value="enable logging from ui. This is correct.&#10;Change to popen for non blocking ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="enable logging from ui. This is correct.&#10;Change to popen for non blocking ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>82</line>
+          <line>90</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>151</line>
+          <line>162</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>131</line>
+          <line>142</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>110</line>
+          <line>121</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
-          <line>162</line>
+          <line>163</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1061,21 +1068,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="177" column="83" selection-start-line="177" selection-start-column="83" selection-end-line="177" selection-end-column="83" />
+        <state relative-caret-position="-39">
+          <caret line="179" column="85" selection-start-line="179" selection-start-column="85" selection-end-line="179" selection-end-column="85" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1538255989350" expanded="true" signature="6632:6641" ph="..." />
+            <marker date="1538256266092" expanded="true" signature="6632:6641" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="145" column="60" lean-forward="true" selection-start-line="145" selection-start-column="60" selection-end-line="145" selection-end-column="60" />
+        <state relative-caret-position="101">
+          <caret line="163" column="64" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <marker date="1538256499987" expanded="true" signature="1152:1304" ph="..." />
           </folding>
         </state>
       </provider>

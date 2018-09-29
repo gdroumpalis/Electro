@@ -3,14 +3,15 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem,
 import UI.mainui
 from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
-from subprocess import check_call, call , Popen
+from subprocess import check_call, call, Popen
 import os
 
 
 class RendererOperationsType(Enum):
-    LivePlotting =1
+    LivePlotting = 1
     Sampling = 2
     Handling = 3
+
 
 # TODO See if RunsOnRaspberry could be readonly
 # TODO test renderer with timer
@@ -20,7 +21,7 @@ class RendererOperationsType(Enum):
 class MainUI(QMainWindow):
     RunsOnRaspberry = False
 
-    def __init__(self, rasp , initfilepath):
+    def __init__(self, rasp, initfilepath):
         """
 
         :type runsonraspberry: bool
@@ -173,9 +174,10 @@ class MainUI(QMainWindow):
         # TODO finish implementation off plotting. See whats going on with arguments
         if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
             print(__file__)
-            Popen([self.getpythonversion(), os.path.join(self.initfilepath,"Renderer/MRenderer.py"),
-                  str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
-                  self.ui.speedspinbox.text(), self.ui.filename.text(), "None" ,str(self.ui.loggingcheckbox.isChecked())])
+            Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+                   str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
+                   self.ui.speedspinbox.text(), self.ui.filename.text(), "None",
+                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked())])
 
     def startsampling(self):
         # TODO Implement sampling function
