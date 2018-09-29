@@ -2,6 +2,12 @@
   <qresource prefix="open">
     <file>Icons/open.png</file>
   </qresource>
+  <qresource prefix="restoreall">
+    <file>Icons/restoreall.png</file>
+  </qresource>
+  <qresource prefix="restoretab">
+    <file>Icons/restoretab.png</file>
+  </qresource>
   <qresource prefix="plot">
     <file>Icons/plot.png</file>
   </qresource>

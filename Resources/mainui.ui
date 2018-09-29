@@ -238,7 +238,7 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QSpinBox" name="spinBox_2">
+                  <widget class="QSpinBox" name="fromspinbox">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -287,7 +287,7 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QSpinBox" name="spinBox_3">
+                  <widget class="QSpinBox" name="tospinbox">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -507,6 +507,8 @@
     <addaction name="actionopen_settings"/>
     <addaction name="actionRefresh_Devices"/>
     <addaction name="actionClear_Device_List"/>
+    <addaction name="actionRestore_All"/>
+    <addaction name="actionRestore_Tab"/>
    </widget>
    <widget class="QMenu" name="menuPlotting">
     <property name="title">
@@ -547,6 +549,8 @@
    <addaction name="actionRefresh_Devices"/>
    <addaction name="actionClear_Device_List"/>
    <addaction name="actionPlottings_UI"/>
+   <addaction name="actionRestore_All"/>
+   <addaction name="actionRestore_Tab"/>
   </widget>
   <action name="actionOpen_Plot_File">
    <property name="icon">
@@ -624,6 +628,30 @@
    </property>
    <property name="text">
     <string>Clear Device List</string>
+   </property>
+  </action>
+  <action name="actionRestore_All">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/restoreall/Icons/restoreall.png</normaloff>:/restoreall/Icons/restoreall.png</iconset>
+   </property>
+   <property name="text">
+    <string>Restore All</string>
+   </property>
+   <property name="toolTip">
+    <string>Restore all tab settings to default</string>
+   </property>
+  </action>
+  <action name="actionRestore_Tab">
+   <property name="icon">
+    <iconset resource="ElectroRes.qrc">
+     <normaloff>:/restoretab/Icons/restoretab.png</normaloff>:/restoretab/Icons/restoretab.png</iconset>
+   </property>
+   <property name="text">
+    <string>Restore Tab</string>
+   </property>
+   <property name="toolTip">
+    <string>Restore the selected tab to default</string>
    </property>
   </action>
  </widget>

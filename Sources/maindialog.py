@@ -10,7 +10,7 @@ import os
 # TODO See if RunsOnRaspberry could be readonly
 # TODO test renderer with timer
 # TODO See What is going on with Handlers
-
+# TODO do some refactoring for utilities
 
 class MainUI(QMainWindow):
     RunsOnRaspberry = False
@@ -35,13 +35,29 @@ class MainUI(QMainWindow):
             self.resize(QSize(1600, 900))
 
     def initializewidgets(self):
-        self.ui.customnamecheckbox.setChecked(False)
-        self.ui.filename.setEnabled(False)
+        self.initializeliveplottingtab()
+        self.initializesamplingtab()
+
+    def initializesamplingtab(self):
         self.ui.customnamecheckbox_2.setChecked(False)
         self.ui.filename2.setEnabled(False)
-        self.ui.filepathlineedit.setEnabled(False)
         self.ui.filepathtoolbutton.setEnabled(False)
+        self.ui.filepathlineedit_2.clear()
+        self.ui.fromspinbox.setValue(0)
+        self.ui.tospinbox.setValue(200)
+        self.ui.filename2.clear()
+        self.ui.autoopenfilecheckbox.setChecked(False)
+
+    def initializeliveplottingtab(self):
+        self.ui.filecheckbox.setChecked(False)
+        self.ui.loggingcheckbox.setChecked(False)
         self.ui.customnamecheckbox.setEnabled(False)
+        self.ui.filename.clear()
+        self.ui.customnamecheckbox.setChecked(False)
+        self.ui.liveplottingcheckbox.setChecked(True)
+        self.ui.filename.setEnabled(False)
+        self.ui.filepathlineedit.setEnabled(False)
+        self.ui.filepathlineedit.clear()
 
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
@@ -54,8 +70,10 @@ class MainUI(QMainWindow):
         connect(self.ui.filepathtoolbutton_2.clicked, self.selecteddevice2)
         connect(self.ui.customnamecheckbox.clicked, self.setcustomfilenameenabled)
         connect(self.ui.customnamecheckbox_2.clicked, self.setcustomfilenameenabled2)
-        connect(self.ui.actionStart_Plotting.triggered, self.startplotting)
+        connect(self.ui.actionStart_Plotting.triggered, self.startmainproc)
         connect(self.ui.filecheckbox.clicked, self.setfilepathenabled)
+        connect(self.ui.actionRestore_Tab.triggered, self.restoretaboptions)
+        connect(self.ui.actionRestore_All.triggered, self.restorealloptions)
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -130,7 +148,7 @@ class MainUI(QMainWindow):
         self.ui.customnamecheckbox.setEnabled(self.ui.filecheckbox.isChecked())
         self.ui.filename.setEnabled(self.ui.filecheckbox.isChecked() and self.ui.customnamecheckbox.isChecked())
 
-    def startplotting(self):
+    def startmainproc(self):
         if self.ui.selecteddevicecombobox.findText("None"):
             selectedtab = self.ui.tabWidget.currentWidget()
             if selectedtab is self.ui.liveplottingtab:
@@ -170,3 +188,19 @@ class MainUI(QMainWindow):
         msg.setText(message)
         msg.setIcon(QMessageBox.Information)
         msg.exec_()
+
+    def restorealloptions(self):
+        self.initializewidgets()
+
+    def restoretaboptions(self):
+        selectedtab = self.ui.tabWidget.currentWidget()
+        if selectedtab is self.ui.liveplottingtab:
+            self.initializeliveplottingtab()
+        elif selectedtab is self.ui.samplingtab:
+            self.initializesamplingtab()
+        elif selectedtab is self.ui.handlerslist:
+            #TODO clear handler tab
+            pass
+        else:
+            print("unknown tab selected")
+
