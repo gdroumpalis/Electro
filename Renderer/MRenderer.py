@@ -5,9 +5,10 @@ import serial
 import datetime
 import sys
 
-# Create object serial port
-portName = sys.argv[1]                      # replace this port name by yours!
-baudrate = sys.argv[2]
+
+portName = sys.argv[1] #TODO check arguments (maybe by length) if null to take defaults
+baudrate = sys.argv[2]#TODO check arguments (maybe by length) if null to take defaults
+filename = sys.argv[3]#TODO check arguments (maybe by length) if null to take defaults
 ser = serial.Serial(portName,baudrate)
 
 ### START QtApp #####
@@ -46,13 +47,20 @@ def update(f):
 
 ### MAIN PROGRAM #####
 # this is a brutal infinite loop calling your realtime data plot
-try:
-    f = open("log.txt","w+")
-    while True:
-        update(f)
-except KeyboardInterrupt:
-    print("finished")
-finally:
-    ser.close()
-    f.close()
+# try:
+#     f = open("log.txt","w+")
+#     while True:
+#         update(f)
+# except KeyboardInterrupt:
+#     print("finished")
+# finally:
+#     ser.close()
+#     f.close()
+
+timer = QtCore.QTimer()
+timer.timeout.connect(update(filename))
+timer.setInterval(700)
+timer.start(0)
+
+if __name__ == '__main__':
     pg.QtGui.QApplication.exec_()

@@ -7,16 +7,7 @@
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/initialrenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/initialrenderer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/bin/autopep8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/bin/epylint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/bin/pylint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/bin/pyreverse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/bin/symilar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,28 +20,30 @@
     <session id="64833180">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="8" />
-          <entry key="project.open.time.3" value="5" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.open.time.3" value="8" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="f2py" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="init" value="5" />
-          <entry key="py" value="78" />
+          <entry key="init" value="6" />
+          <entry key="py" value="103" />
           <entry key="qrc" value="1" />
           <entry key="settings" value="1" />
+          <entry key="tets" value="1" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="83" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Python" value="110" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -61,22 +54,22 @@
           <entry key="Python Console" value="18" />
           <entry key="dummy" value="71" />
           <entry key="gitignore" value="31" />
-          <entry key="init" value="140" />
-          <entry key="py" value="6969" />
-          <entry key="txt" value="582" />
+          <entry key="init" value="366" />
+          <entry key="py" value="9253" />
+          <entry key="txt" value="966" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="684" />
-          <entry key="Python" value="7189" />
+          <entry key="PLAIN_TEXT" value="1068" />
+          <entry key="Python" value="9699" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
           <entry key="git.branch.checkout.local" value="3" />
-          <entry key="git.branch.create.new" value="3" />
-          <entry key="git.branch.delete.local" value="3" />
+          <entry key="git.branch.create.new" value="4" />
+          <entry key="git.branch.delete.local" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -85,103 +78,80 @@
     <favorites_list name="Electro" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-                  <folding>
-                    <element signature="e#0#105#0" expanded="true" />
-                    <marker date="1537899996993" expanded="true" signature="4094:4258" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="620">
-                  <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="60" selection-start-line="60" selection-end-line="60" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Examples/initialrenderer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-34">
-                  <caret line="6" selection-end-line="61" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Examples/arguments.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="40">
-                  <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Utilities/GlobalUtilities.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="4" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtWidgets/QFileDialog.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="67">
-                  <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+                <marker date="1538178594047" expanded="true" signature="928:1015" ph="..." />
+                <marker date="1538178594047" expanded="true" signature="1010:1015" ph="..." />
+                <marker date="1538178594047" expanded="true" signature="4726:5083" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5420">
+              <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5440">
+              <caret line="282" column="31" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33260">
+              <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -206,7 +176,6 @@
         <option value="$PROJECT_DIR$/Sources/RendererParams.py" />
         <option value="$PROJECT_DIR$/Sources/RendererUtilities.py" />
         <option value="$PROJECT_DIR$/Renderer/initialrenderer.py" />
-        <option value="$PROJECT_DIR$/init" />
         <option value="$PROJECT_DIR$/Examples/arguments.py" />
         <option value="$PROJECT_DIR$/UI/mainui.py" />
         <option value="$PROJECT_DIR$/Sources/mainui.py" />
@@ -216,8 +185,10 @@
         <option value="$PROJECT_DIR$/Sources/CustomItems.py" />
         <option value="$PROJECT_DIR$/Utilities/GlobalUtilities.py" />
         <option value="$PROJECT_DIR$/Examples/initialrenderer.py" />
-        <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
         <option value="$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py" />
+        <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
+        <option value="$PROJECT_DIR$/init" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/Sources/maindialog.py" />
       </list>
     </option>
@@ -278,6 +249,17 @@
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Sources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -285,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="initi&#9;null&#9;null&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/mainui.py" />
+    <property name="SearchEverywhereHistoryKey" value="mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;initi&#9;null&#9;null&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/mainui.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -301,127 +283,6 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Examples" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/ElectroRes_rc.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/ElectroRes.qrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/mainui.ui</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sources/maindialog.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/UI/mainui.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Python/bin/cygdb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Python/bin/cython</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Python/bin/cythonize</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/Icons/clear.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/Icons/plot.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/Icons/refresh.png</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -448,7 +309,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -615,7 +476,49 @@
       <option name="project" value="LOCAL" />
       <updated>1537821766187</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="tab cases. disable ui component when they are not needed">
+      <created>1537900127782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1537900127782</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add todos. Add testing impl of live plottings. Not yet tested">
+      <created>1537902507663</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1537902507663</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery">
+      <created>1538174744517</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1538174744517</updated>
+    </task>
+    <task id="LOCAL-00019" summary="check if proper device is selected check if any of the checkboxes are selected">
+      <created>1538177846786</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1538177846786</updated>
+    </task>
+    <task id="LOCAL-00020" summary="set initial size by platform">
+      <created>1538178415583</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1538178415583</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update todos">
+      <created>1538178655137</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1538178655137</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -623,13 +526,12 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
     <todo-panel id="all">
-      <are-packages-shown value="true" />
+      <flatten-packages value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" x="1932" y="28" width="709" height="1052" id="Project" order="0" type="FLOATING" weight="0.21940929" />
       <window_info x="2178" y="23" width="839" height="1046" id="Structure" order="1" type="FLOATING" weight="0.25" />
@@ -638,12 +540,12 @@
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3286334" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.42702702" />
+      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.4251627" />
       <window_info anchor="bottom" auto_hide="true" x="1957" y="632" width="1863" height="407" id="Run" order="5" sideWeight="0.4975715" weight="0.3286334" />
       <window_info active="true" anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.489154" />
       <window_info anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" weight="0.35249457" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -803,7 +705,13 @@
     <MESSAGE value="prototype 4 ui. remove settings ui components" />
     <MESSAGE value="Add basic options on the UIs" />
     <MESSAGE value="Add resources. Some ui implementation. Listview research." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add resources. Some ui implementation. Listview research." />
+    <MESSAGE value="tab cases. disable ui component when they are not needed" />
+    <MESSAGE value="Add todos. Add testing impl of live plottings. Not yet tested" />
+    <MESSAGE value="fix checkname toggle with filecheckbox. Added arguments rasp for running on raspbery" />
+    <MESSAGE value="check if proper device is selected check if any of the checkboxes are selected" />
+    <MESSAGE value="set initial size by platform" />
+    <MESSAGE value="update todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="update todos" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -815,47 +723,47 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>selectedtab is self.ui.tab_3</expression-string>
+        <expression-string>self.ui.selecteddevicecombobox.count()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab is self.ui.tab_2</expression-string>
+        <expression-string>&quot;None&quot; in self.ui.selecteddevicecombobox.count()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab is self.ui.tab</expression-string>
+        <expression-string>&quot;None&quot; in self.ui.selecteddevicecombobox.children()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab is self.ui.tabWidget</expression-string>
+        <expression-string>self.ui.selecteddevicecombobox.children()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.ui.tabWidget.currentIndex()</expression-string>
+        <expression-string>self.getpythonversion()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab.__eq__(self.ui.tab_2)</expression-string>
+        <expression-string>MainUI.RunsOnRaspberry</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab.__eq__(self.ui.tab)</expression-string>
+        <expression-string>len(sys.argv)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab=self.ui.tab</expression-string>
+        <expression-string>&quot;rasp&quot; in sys.argv</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>selectedtab= self.ui.tab</expression-string>
+        <expression-string>sys.argv</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -884,24 +792,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/pyqtgraph/graphicsItems/GraphicsLayout.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -925,13 +819,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElectroRes_rc.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/lib64/python3.5/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1288" selection-start-line="1288" selection-end-line="1288" />
-        </state>
-      </provider>
     </entry>
     <entry file="file:///usr/lib64/python3.5/typing.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -967,13 +854,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/CustomItems.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="1645" column="37" lean-forward="true" selection-start-line="1645" selection-start-column="37" selection-end-line="1645" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtWidgets/QAction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -995,6 +875,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/tets" />
+    <entry file="file:///usr/lib64/python3.5/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72580">
+          <caret line="3629" column="8" selection-start-line="3629" selection-start-column="8" selection-end-line="3629" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8320">
+          <caret line="418" selection-start-line="418" selection-end-line="418" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtWidgets/QAbstractSpinBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4220">
+          <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/arguments.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -1002,41 +911,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init" />
+    <entry file="file:///usr/lib64/python3.5/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="453" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/initialrenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="6" selection-end-line="61" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bin/f2py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1538178594047" expanded="true" signature="928:1015" ph="..." />
+            <marker date="1538178594047" expanded="true" signature="1010:1015" ph="..." />
+            <marker date="1538178594047" expanded="true" signature="4726:5083" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5420">
+          <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5440">
+          <caret line="282" column="31" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="80">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#105#0" expanded="true" />
-            <marker date="1537899996993" expanded="true" signature="4094:4258" ph="..." />
-          </folding>
+        <state relative-caret-position="33260">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>

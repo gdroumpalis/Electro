@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>852</width>
-    <height>749</height>
+    <width>718</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -168,7 +168,14 @@
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QLineEdit" name="filepathlineedit"/>
+                <widget class="QLineEdit" name="filepathlineedit">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="2">
                 <widget class="QToolButton" name="filepathtoolbutton">
@@ -315,7 +322,14 @@
              <item row="1" column="1">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
                <item>
-                <widget class="QLineEdit" name="filepathlineedit_2"/>
+                <widget class="QLineEdit" name="filepathlineedit_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="filepathtoolbutton_2">
@@ -471,7 +485,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>852</width>
+     <width>718</width>
      <height>26</height>
     </rect>
    </property>

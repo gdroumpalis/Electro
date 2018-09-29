@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(852, 749)
+        MainWindow.resize(718, 521)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -106,6 +106,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.gridLayout_8.addWidget(self.label_3, 0, 0, 1, 1)
         self.filepathlineedit = QtWidgets.QLineEdit(self.frame_2)
+        self.filepathlineedit.setMinimumSize(QtCore.QSize(300, 0))
         self.filepathlineedit.setObjectName("filepathlineedit")
         self.gridLayout_8.addWidget(self.filepathlineedit, 0, 1, 1, 1)
         self.filepathtoolbutton = QtWidgets.QToolButton(self.frame_2)
@@ -183,6 +184,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.filepathlineedit_2 = QtWidgets.QLineEdit(self.frame_3)
+        self.filepathlineedit_2.setMinimumSize(QtCore.QSize(300, 0))
         self.filepathlineedit_2.setObjectName("filepathlineedit_2")
         self.horizontalLayout_5.addWidget(self.filepathlineedit_2)
         self.filepathtoolbutton_2 = QtWidgets.QToolButton(self.frame_3)
@@ -270,7 +272,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 852, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 718, 26))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
