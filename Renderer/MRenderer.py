@@ -87,7 +87,7 @@ baudrate = GetBaudrate(sys.argv)
 filename = GetDefaultFilepath(sys.argv)
 ser = serial.Serial(devicename, baudrate)
 maxstep = GetDefaultMaxStep(sys.argv)
-timer = QtCore.QTimer()
+# timer = QtCore.QTimer()
 f = openfilewithproperfilename()
 ### START QtApp #####
 app = QtGui.QApplication([])  # you MUST do this once (initialize things)
@@ -102,7 +102,7 @@ windowWidth = 500  # width of the window displaying the curve
 Xm = linspace(0, 0, windowWidth)  # create array that will contain the relevant time series
 Am = linspace(0, 0, windowWidth)
 ptr = 1  # set first x position
-
+p.disableAutoRange()
 
 # Realtime data plot. Each time this function is called, the data display is updated
 def updateforliveplottin(f, logging, filelogging):
@@ -134,7 +134,7 @@ def updateforliveplottin(f, logging, filelogging):
     curve2.setData(Am)
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
-
+    p.autoRange()
 
 def updateforsampling(f, step):
     global curve, curve2, ptr, Xm, Am
@@ -179,21 +179,22 @@ def updateforhandling(f):
 
 if RendererOperation == RendererOperationsType.LivePlotting:
     # TODO create file and open it. Then give it to update method
-    timer.timeout.connect(lambda: updateforliveplottin(f, terminallogging, filelogging))
-    timer.start(0)
+    while True:
+        updateforliveplottin(f, terminallogging, filelogging)
     print("Plotting Started")
     print(filename)
 
 elif RendererOperation == RendererOperationsType.Sampling:
-    step = 0
-    timer.timeout.connect(lambda: updateforsampling(filename, step))
-    timer.setInterval(700)
-    timer.start(0)
+    pass
+    # timer.timeout.connect(lambda: updateforsampling(filename, step))
+    # timer.setInterval(700)
+    # timer.start(0)
 
 elif RendererOperation == RendererOperationsType.Handling:
-    timer.timeout.connect(lambda: updateforhandling(filename))
-    timer.setInterval(700)
-    timer.start(0)
+    pass
+    # timer.timeout.connect(lambda: updateforhandling(filename))
+    # timer.setInterval(700)
+    # timer.start(0)
 else:
     raise Exception("Rendering prosses cannot start")
 
