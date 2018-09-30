@@ -13,9 +13,11 @@ class RendererOperationsType(Enum):
     Sampling = 2
     Handling = 3
 
+
 def releaseresources():
     if f is not None:
         f.close()
+
 
 def GetOperationMethodFromArgs(argv: int) -> RendererOperationsType:
     type = int(argv[1])
@@ -85,9 +87,9 @@ filelogging = GetFileLogging(sys.argv)
 devicename = GetDeviceName(sys.argv)
 baudrate = GetBaudrate(sys.argv)
 filename = GetDefaultFilepath(sys.argv)
-ser = serial.Serial(devicename, baudrate)
+ser = serial.Serial(devicename, baudrate, timeout=0.15)
 maxstep = GetDefaultMaxStep(sys.argv)
-# timer = QtCore.QTimer()
+timer = QtCore.QTimer()
 f = openfilewithproperfilename()
 ### START QtApp #####
 app = QtGui.QApplication([])  # you MUST do this once (initialize things)
@@ -104,9 +106,11 @@ Am = linspace(0, 0, windowWidth)
 ptr = 1  # set first x position
 p.disableAutoRange()
 
+
 # Realtime data plot. Each time this function is called, the data display is updated
-def updateforliveplottin(f, logging, filelogging):
+def updateforliveplottin(f, logging, filelogging, t):
     """
+    :param t:
     :type logging: bool
     """
     global curve, curve2, ptr, Xm, Am
@@ -135,6 +139,7 @@ def updateforliveplottin(f, logging, filelogging):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
     p.autoRange()
+
 
 def updateforsampling(f, step):
     global curve, curve2, ptr, Xm, Am
@@ -179,8 +184,11 @@ def updateforhandling(f):
 
 if RendererOperation == RendererOperationsType.LivePlotting:
     # TODO create file and open it. Then give it to update method
-    while True:
-        updateforliveplottin(f, terminallogging, filelogging)
+    # t = True
+    # while pg.QtGui.QApplication is not None:
+    #     updateforliveplottin(f, terminallogging, filelogging, t)
+    timer.timeout.connect(lambda:updateforliveplottin(f, terminallogging, filelogging, True))
+    timer.start(0)
     print("Plotting Started")
     print(filename)
 
@@ -199,6 +207,6 @@ else:
     raise Exception("Rendering prosses cannot start")
 
 if __name__ == '__main__':
-    pg.QtGui.QApplication.exec_()
+    pg.QtGui.QApplication.instance().exec_()
     print("Proccess Ended")
     releaseresources()
