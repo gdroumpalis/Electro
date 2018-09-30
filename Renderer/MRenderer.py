@@ -6,7 +6,7 @@ import pyqtgraph as pg
 import serial
 import datetime
 import sys
-
+from threading import Thread
 
 class RendererOperationsType(Enum):
     LivePlotting = 1
@@ -104,7 +104,7 @@ windowWidth = 500  # width of the window displaying the curve
 Xm = linspace(0, 0, windowWidth)  # create array that will contain the relevant time series
 Am = linspace(0, 0, windowWidth)
 ptr = 1  # set first x position
-p.disableAutoRange()
+# p.disableAutoRange()
 
 
 # Realtime data plot. Each time this function is called, the data display is updated
@@ -138,7 +138,7 @@ def updateforliveplottin(f, logging, filelogging, t):
     curve2.setData(Am)
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
-    p.autoRange()
+    # p.autoRange()
 
 
 def updateforsampling(f, step):
@@ -182,13 +182,20 @@ def updateforhandling(f):
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
 
+def metallica():
+    while True:
+        updateforliveplottin(f, terminallogging, filelogging, True)
+
+
 if RendererOperation == RendererOperationsType.LivePlotting:
     # TODO create file and open it. Then give it to update method
     # t = True
     # while pg.QtGui.QApplication is not None:
     #     updateforliveplottin(f, terminallogging, filelogging, t)
-    timer.timeout.connect(lambda:updateforliveplottin(f, terminallogging, filelogging, True))
-    timer.start(0)
+    p = Thread(target=lambda :metallica())
+    p.start()
+    # timer.timeout.connect(lambda:updateforliveplottin(f, terminallogging, filelogging, True))
+    # timer.start(0.015)
     print("Plotting Started")
     print(filename)
 
