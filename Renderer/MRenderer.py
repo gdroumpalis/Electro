@@ -80,7 +80,7 @@ def GetFileLogging(argv):
         else:
             return False
 
-
+runningsemaphore = True
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
 terminallogging = GetTerminalLogging(sys.argv)
 filelogging = GetFileLogging(sys.argv)
@@ -181,11 +181,11 @@ def updateforhandling(f):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
-
 def metallica():
-    while True:
+    while runningsemaphore:
         updateforliveplottin(f, terminallogging, filelogging, True)
 
+p = Thread()
 
 if RendererOperation == RendererOperationsType.LivePlotting:
     # TODO create file and open it. Then give it to update method
@@ -216,4 +216,5 @@ else:
 if __name__ == '__main__':
     pg.QtGui.QApplication.instance().exec_()
     print("Proccess Ended")
+    runningsemaphore = False
     releaseresources()
