@@ -15,9 +15,11 @@ class RendererOperationsType(Enum):
 
 
 def releaseresources():
+    global runningsemaphore
+    runningsemaphore = False
     if f is not None:
         f.close()
-
+    ser.close()
 
 def GetOperationMethodFromArgs(argv: int) -> RendererOperationsType:
     type = int(argv[1])
@@ -181,9 +183,11 @@ def updateforhandling(f):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
-def metallica():
+def renderingloop():
+    print("Rendering loop starting")
     while runningsemaphore:
         updateforliveplottin(f, terminallogging, filelogging, True)
+    print("Rendering loop exiting")
 
 p = Thread()
 
@@ -192,7 +196,7 @@ if RendererOperation == RendererOperationsType.LivePlotting:
     # t = True
     # while pg.QtGui.QApplication is not None:
     #     updateforliveplottin(f, terminallogging, filelogging, t)
-    p = Thread(target=lambda :metallica())
+    p = Thread(target=lambda :renderingloop())
     p.start()
     # timer.timeout.connect(lambda:updateforliveplottin(f, terminallogging, filelogging, True))
     # timer.start(0.015)
@@ -215,6 +219,5 @@ else:
 
 if __name__ == '__main__':
     pg.QtGui.QApplication.instance().exec_()
-    print("Proccess Ended")
-    runningsemaphore = False
+    print("UI Proccess Ended")
     releaseresources()
