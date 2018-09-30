@@ -108,7 +108,7 @@ class MainUI(QMainWindow):
 
     def deviceaddtocombo(self, dev):
         if MainUI.RunsOnRaspberry:
-            self.ui.selecteddevicecombobox.addItem(dev.replace("\n"))
+            self.ui.selecteddevicecombobox.addItem(dev.replace("\n",""))
         else:
             self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
 
