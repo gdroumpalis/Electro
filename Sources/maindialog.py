@@ -5,6 +5,7 @@ from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
 from subprocess import check_call, call, Popen
 import os
+import uuid
 
 
 class RendererOperationsType(Enum):
@@ -176,7 +177,7 @@ class MainUI(QMainWindow):
             print(__file__)
             Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
                    str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
-                   self.ui.speedspinbox.text(), self.ui.filename.text(), "None",
+                   self.ui.speedspinbox.text(), self.getcompbinedfilename(), "None",
                    str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked())])
 
     def startsampling(self):
@@ -213,3 +214,9 @@ class MainUI(QMainWindow):
             pass
         else:
             print("unknown tab selected")
+
+    def getcompbinedfilename(self):
+        if self.ui.customnamecheckbox.isChecked():
+            return os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
+        else:
+            return os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))

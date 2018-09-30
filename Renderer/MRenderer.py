@@ -7,19 +7,31 @@ import serial
 import datetime
 import sys
 
+
 class RendererOperationsType(Enum):
-    LivePlotting =1
+    LivePlotting = 1
     Sampling = 2
     Handling = 3
+
+def releaseresources():
+    if f is not None:
+        f.close()
 
 def GetOperationMethodFromArgs(argv: int) -> RendererOperationsType:
     type = int(argv[1])
     if type == 1:
         return RendererOperationsType.LivePlotting
-    elif type ==2:
+    elif type == 2:
         return RendererOperationsType.Sampling
     elif type == 3:
         return RendererOperationsType.Handling
+
+
+def openfilewithproperfilename():
+    if GetFileLogging(sys.argv):
+        return open(GetDefaultFilepath(sys.argv), "w+")
+    else:
+        return None
 
 
 def GetDeviceName(argv):
@@ -46,6 +58,7 @@ def GetDefaultMaxStep(argv):
     else:
         return int(argv[5])
 
+
 def GetTerminalLogging(argv):
     if argv[6] == "None":
         return False
@@ -54,6 +67,8 @@ def GetTerminalLogging(argv):
             return True
         else:
             return False
+
+
 def GetFileLogging(argv):
     if argv[7] == "None":
         return False
@@ -62,6 +77,7 @@ def GetFileLogging(argv):
             return True
         else:
             return False
+
 
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
 terminallogging = GetTerminalLogging(sys.argv)
@@ -72,6 +88,7 @@ filename = GetDefaultFilepath(sys.argv)
 ser = serial.Serial(devicename, baudrate)
 maxstep = GetDefaultMaxStep(sys.argv)
 timer = QtCore.QTimer()
+f = openfilewithproperfilename()
 ### START QtApp #####
 app = QtGui.QApplication([])  # you MUST do this once (initialize things)
 ####################
@@ -88,7 +105,7 @@ ptr = 1  # set first x position
 
 
 # Realtime data plot. Each time this function is called, the data display is updated
-def updateforliveplottin(f, logging , filelogging):
+def updateforliveplottin(f, logging, filelogging):
     """
     :type logging: bool
     """
@@ -98,7 +115,7 @@ def updateforliveplottin(f, logging , filelogging):
     value = ser.readline()  # read line (single value) from the serial port
     try:
         Xm[-1] = float(value)  # vector containing the instantaneous values
-    except :
+    except:
         Xm[-1] = 0.0
 
     if ptr <= 500:
@@ -151,7 +168,7 @@ def updateforhandling(f):
     else:
         Am[-1] = sum(Xm) / len(Xm)
     print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
-    #f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+    # f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
     ptr += 1  # update x position for displaying the curve
     curve.setData(Xm)  # set the curve with this data
     curve.setPos(ptr, 1)  # set x position in the graph to 0
@@ -161,11 +178,12 @@ def updateforhandling(f):
 
 
 if RendererOperation == RendererOperationsType.LivePlotting:
-    #TODO create file and open it. Then give it to update method
-    timer.timeout.connect(lambda: updateforliveplottin(filename, terminallogging , filelogging))
+    # TODO create file and open it. Then give it to update method
+    timer.timeout.connect(lambda: updateforliveplottin(f, terminallogging, filelogging))
     timer.start(0)
     print("Plotting Started")
     print(filename)
+
 elif RendererOperation == RendererOperationsType.Sampling:
     step = 0
     timer.timeout.connect(lambda: updateforsampling(filename, step))
@@ -182,3 +200,4 @@ else:
 if __name__ == '__main__':
     pg.QtGui.QApplication.exec_()
     print("Proccess Ended")
+    releaseresources()
