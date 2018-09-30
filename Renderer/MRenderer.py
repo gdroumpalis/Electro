@@ -106,8 +106,6 @@ windowWidth = 500  # width of the window displaying the curve
 Xm = linspace(0, 0, windowWidth)  # create array that will contain the relevant time series
 Am = linspace(0, 0, windowWidth)
 ptr = 1  # set first x position
-# p.disableAutoRange()
-
 
 # Realtime data plot. Each time this function is called, the data display is updated
 def updateforliveplottin(f, logging, filelogging, t):
@@ -140,8 +138,6 @@ def updateforliveplottin(f, logging, filelogging, t):
     curve2.setData(Am)
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
-    # p.autoRange()
-
 
 def updateforsampling(f, step):
     global curve, curve2, ptr, Xm, Am
@@ -183,7 +179,7 @@ def updateforhandling(f):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
-def renderingloop():
+def renderingloop():#TODO clean that up.. Maybe a sub class of thread or simple ine the updatemethod
     print("Rendering loop starting")
     while runningsemaphore:
         updateforliveplottin(f, terminallogging, filelogging, True)
@@ -203,13 +199,13 @@ if RendererOperation == RendererOperationsType.LivePlotting:
     print("Plotting Started")
     print(filename)
 
-elif RendererOperation == RendererOperationsType.Sampling:
+elif RendererOperation == RendererOperationsType.Sampling:#TODO implement those
     pass
     # timer.timeout.connect(lambda: updateforsampling(filename, step))
     # timer.setInterval(700)
     # timer.start(0)
 
-elif RendererOperation == RendererOperationsType.Handling:
+elif RendererOperation == RendererOperationsType.Handling:#TODO implement those
     pass
     # timer.timeout.connect(lambda: updateforhandling(filename))
     # timer.setInterval(700)
@@ -220,4 +216,4 @@ else:
 if __name__ == '__main__':
     pg.QtGui.QApplication.instance().exec_()
     print("UI Proccess Ended")
-    releaseresources()
+    releaseresources() #TODO do not forget to update releasesources method
