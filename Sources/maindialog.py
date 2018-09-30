@@ -107,10 +107,10 @@ class MainUI(QMainWindow):
             self.fillcombowithnone()
 
     def deviceaddtocombo(self, dev):
-        if MainUI.RunsOnRaspberry:
-            self.ui.selecteddevicecombobox.addItem(dev.replace("\n",""))
-        else:
-            self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
+        # if MainUI.RunsOnRaspberry:
+        #     self.ui.selecteddevicecombobox.addItem(dev.replace("\n",""))
+        # else:
+        self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
 
     def fillcombowithnone(self):
         self.clearcombo()
