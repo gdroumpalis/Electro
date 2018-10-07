@@ -8,6 +8,29 @@ import datetime
 import sys
 from threading import Thread
 
+
+class RenderingThreadLooper:
+
+    def __init__(self, target):
+        self.executing = True
+        self.runnablemethod = target
+
+    def executiontarget(self):
+        while self.executing:
+            self.runnablemethod()
+
+
+    def finishexecution(self):
+        self.executing = False
+        print(self.renderthread.name + " finished")
+
+    def run(self):
+        self.renderthread = Thread(target=self.executiontarget)
+        self.renderthread.setName("Rendering_thread")
+        self.renderthread.start()
+        print(self.renderthread.name + " started")
+
+
 class RendererOperationsType(Enum):
     LivePlotting = 1
     Sampling = 2
@@ -15,11 +38,15 @@ class RendererOperationsType(Enum):
 
 
 def releaseresources():
-    global runningsemaphore
-    runningsemaphore = False
     if f is not None:
         f.close()
     ser.close()
+    for looper in loopers:
+        looper.finishexecution()
+
+def attachloopertogloballooperpool(looper):
+    global loopers
+    loopers.append(looper)
 
 def GetOperationMethodFromArgs(argv: int) -> RendererOperationsType:
     type = int(argv[1])
@@ -82,7 +109,7 @@ def GetFileLogging(argv):
         else:
             return False
 
-runningsemaphore = True
+loopers = []
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
 terminallogging = GetTerminalLogging(sys.argv)
 filelogging = GetFileLogging(sys.argv)
@@ -130,7 +157,8 @@ def updateforliveplottin(f, logging, filelogging, t):
         print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
 
     if filelogging:
-        f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+        if not f.closed:
+            f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
 
     ptr += 1  # update x position for displaying the curve
     curve.setData(Xm)  # set the curve with this data
@@ -179,23 +207,16 @@ def updateforhandling(f):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
-def renderingloop():#TODO clean that up.. Maybe a sub class of thread or simple ine the updatemethod
-    print("Rendering loop starting")
-    while runningsemaphore:
-        updateforliveplottin(f, terminallogging, filelogging, True)
-    print("Rendering loop exiting")
-
-p = Thread()
-
 if RendererOperation == RendererOperationsType.LivePlotting:
     # TODO create file and open it. Then give it to update method
-    # t = True
-    # while pg.QtGui.QApplication is not None:
-    #     updateforliveplottin(f, terminallogging, filelogging, t)
-    p = Thread(target=lambda :renderingloop())
-    p.start()
-    # timer.timeout.connect(lambda:updateforliveplottin(f, terminallogging, filelogging, True))
-    # timer.start(0.015)
+
+    # p = Thread(target=lambda :liveplottingrenderingloop())
+    # p.start()
+    f = open(filename ,"w+")
+
+    renderlooper = RenderingThreadLooper(lambda : updateforliveplottin(f, terminallogging, filelogging, True))
+    renderlooper.run()
+    attachloopertogloballooperpool(renderlooper)
     print("Plotting Started")
     print(filename)
 
