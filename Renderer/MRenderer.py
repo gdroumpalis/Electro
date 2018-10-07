@@ -11,11 +11,12 @@ from threading import Thread
 
 class RenderingThreadLooper:
 
-    def __init__(self, target, timeout=-1 , name = "Processing_Thread"):
+    def __init__(self, target, timeout=-1, name="Processing_Thread"):
         self.executing = True
         self.runnablemethod = target
         self.timeout = timeout
         self.threadname = name
+        self.renderthread = None
 
     def executiontarget(self):
         if self.timeout == -1:
@@ -36,6 +37,8 @@ class RenderingThreadLooper:
         self.renderthread.start()
         print(self.renderthread.name + " started")
 
+    def wait(self):
+        self.renderthread.join()
 
 class RendererOperationsType(Enum):
     LivePlotting = 1
@@ -44,13 +47,14 @@ class RendererOperationsType(Enum):
 
 
 def releaseresources():
-    global f,ser,loopers
+    global f, ser, loopers
     if f is not None:
         f.close()
     ser.close()
     for looper in loopers:
         looper.finishexecution()
     del loopers[:]
+
 
 def attachloopertogloballooperpool(looper):
     global loopers
@@ -152,7 +156,7 @@ def updateforliveplottin(f, logging, filelogging, t):
     :param t:
     :type logging: bool
     """
-    global curve, curve2, ptr, Xm, Am , ser
+    global curve, curve2, ptr, Xm, Am, ser
     Xm[:-1] = Xm[1:]  # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()  # read line (single value) from the serial port
@@ -181,7 +185,7 @@ def updateforliveplottin(f, logging, filelogging, t):
 
 
 def updateforsampling(f):
-    global ptr, Xm, Am ,ser
+    global ptr, Xm, Am, ser
     Xm[:-1] = Xm[1:]  # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()  # read line (single value) from the serial port
@@ -219,18 +223,18 @@ def updateforhandling(f):
 
 
 if RendererOperation == RendererOperationsType.LivePlotting:
-    renderlooper = RenderingThreadLooper(lambda: updateforliveplottin(f, terminallogging, filelogging, True) , name="Live Plotting Thread")
+    renderlooper = RenderingThreadLooper(lambda: updateforliveplottin(f, terminallogging, filelogging, True),
+                                         name="Live Plotting Thread")
     renderlooper.run()
-
     attachloopertogloballooperpool(renderlooper)
-    renderlooper.renderthread.join()
     print("Plotting Started")
 
 elif RendererOperation == RendererOperationsType.Sampling:  # TODO implement those
 
-    renderlooper = RenderingThreadLooper(lambda: updateforsampling(f), timeout=maxstep , name="Sampling Thread")
+    renderlooper = RenderingThreadLooper(lambda: updateforsampling(f), timeout=maxstep, name="Sampling Thread")
     attachloopertogloballooperpool(renderlooper)
     renderlooper.run()
+    renderlooper.wait()
     print("Sampling started")
 
 elif RendererOperation == RendererOperationsType.Handling:  # TODO implement those

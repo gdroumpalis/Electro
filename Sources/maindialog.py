@@ -186,6 +186,9 @@ class MainUI(QMainWindow):
                str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
                self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
                "None", "True"])
+        if self.ui.autoopenfilecheckbox.isChecked():
+            with open(self.getcompbinedfilename2(),"r") as r:
+                print(r.readlines()) #TODO render offline file
 
     def startmonitoring(self):
         # TODO implement monitoring.. this is affected by handlers.
@@ -225,7 +228,7 @@ class MainUI(QMainWindow):
             return os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
 
     def getcompbinedfilename2(self):
-        if self.ui.customnamecheckbox.isChecked():
+        if self.ui.customnamecheckbox_2.isChecked():
             return os.path.join(self.ui.filepathlineedit_2.text(), self.ui.filename2.text())
         else:
             return os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
