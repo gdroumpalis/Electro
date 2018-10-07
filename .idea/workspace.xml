@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/mainui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/mainui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/mainui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/mainui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,18 +33,18 @@
           <entry key="f2py" value="1" />
           <entry key="gitignore" value="6" />
           <entry key="init" value="6" />
-          <entry key="py" value="139" />
+          <entry key="py" value="142" />
           <entry key="qrc" value="1" />
           <entry key="settings" value="1" />
           <entry key="test" value="1" />
           <entry key="tets" value="1" />
-          <entry key="txt" value="7" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="146" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Python" value="149" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -53,14 +56,14 @@
           <entry key="dummy" value="119" />
           <entry key="gitignore" value="60" />
           <entry key="init" value="366" />
-          <entry key="py" value="14403" />
-          <entry key="txt" value="1812" />
+          <entry key="py" value="15200" />
+          <entry key="txt" value="1889" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1991" />
-          <entry key="Python" value="14910" />
+          <entry key="PLAIN_TEXT" value="2068" />
+          <entry key="Python" value="15707" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -76,16 +79,40 @@
     <favorites_list name="Electro" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="186">
+              <caret line="177" column="101" lean-forward="true" selection-start-line="177" selection-start-column="101" selection-end-line="177" selection-end-column="101" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1538307155774" expanded="true" signature="6649:6658" ph="..." />
+                <marker date="1538915913867" expanded="true" signature="6649:6658" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samplingfa43e56d-cda8-40fa-bd3a-77d1ba07a581.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sampling68cdb135-e191-42ef-8ed4-5f00ce0435a4.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samplingddf00c8b-b026-4cd1-be1e-8b0d6251e6ca.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -93,13 +120,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="159" column="14" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+            <state relative-caret-position="255">
+              <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1538907800861" expanded="true" signature="1020:1068" ph="..." />
-                <marker date="1538907800861" expanded="true" signature="2141:2306" ph="..." />
-                <marker date="1538907800861" expanded="true" signature="3500:3505" ph="..." />
+                <element signature="e#5350#6188#0" />
+                <marker date="1538917116727" expanded="true" signature="440:671" ph="..." />
+                <marker date="1538917116727" expanded="true" signature="1324:1373" ph="..." />
+                <marker date="1538917116727" expanded="true" signature="2446:2612" ph="..." />
+                <marker date="1538917116727" expanded="true" signature="3901:3906" ph="..." />
               </folding>
             </state>
           </provider>
@@ -154,10 +183,10 @@
         <option value="$PROJECT_DIR$/init.py" />
         <option value="$PROJECT_DIR$/Utilities/GlobalUtilities.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Sources/maindialog.py" />
         <option value="$PROJECT_DIR$/Renderer/RenderThread.py" />
         <option value="$PROJECT_DIR$/Renderer/RenderThreading.py" />
         <option value="$PROJECT_DIR$/Renderer/RenderingThreading.py" />
+        <option value="$PROJECT_DIR$/Sources/maindialog.py" />
         <option value="$PROJECT_DIR$/Renderer/MRenderer.py" />
       </list>
     </option>
@@ -604,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538338907196</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactoring rendering. New loopersthread class. fix file closing error">
+      <created>1538907905197</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1538907905197</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -633,7 +669,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.489154" />
-      <window_info active="true" anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" visible="true" weight="0.35249457" />
+      <window_info active="true" anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" visible="true" weight="0.43600866" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -778,7 +814,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add initialization of devices. New settings icons. settings ui changes" />
     <MESSAGE value="initial dialog communication. select device" />
     <MESSAGE value="prototype 4 ui. remove settings ui components" />
     <MESSAGE value="Add basic options on the UIs" />
@@ -803,20 +838,31 @@
     <MESSAGE value="testing.intoduce running semaphore" />
     <MESSAGE value="Renaming rendering loop. Info via printings. Move ending semaphore to release()" />
     <MESSAGE value="Add some todos. Remove toggle Autorange" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some todos. Remove toggle Autorange" />
+    <MESSAGE value="refactoring rendering. New loopersthread class. fix file closing error" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring rendering. New loopersthread class. fix file closing error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>39</line>
+          <line>45</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>26</line>
+          <line>32</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
+          <line>182</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
+          <line>178</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -830,6 +876,26 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>str(self.ui.loggingcheckbox.isChecked())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.ui.speedspinbox.text()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.getpythonversion()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.join(self.initfilepath, &quot;Renderer/MRenderer.py&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>os.path.join(self.initfilepath,&quot;Renderer/MRenderer.py&quot;)</expression-string>
         <language-id>Python</language-id>
@@ -855,79 +921,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>os.path.isfile(__file__)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.isfile()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>__file__</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="516" selection-start-line="516" selection-end-line="516" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/*.py" />
-    <entry file="file:///usr/lib64/python3.5/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="310" selection-start-line="310" selection-end-line="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/pyqtgraph/graphicsItems/GraphicsLayout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtCore/QThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/ElectroRes.qrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/ElectroRes.py" />
-    <entry file="file://$PROJECT_DIR$/ElectroRes_rc.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/lib64/python3.5/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="2302" column="8" selection-start-line="2302" selection-start-column="8" selection-end-line="2302" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/mainui.py" />
     <entry file="file://$PROJECT_DIR$/Sources/settings" />
     <entry file="file://$PROJECT_DIR$/Sources/devices.txt">
@@ -1093,17 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1538307155774" expanded="true" signature="6649:6658" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1139,15 +1124,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/liveplottinglogging43294be9-0969-4464-8d75-e1bdeadf56d2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liveplottingloggingc3cb2378-b519-45f1-9951-cee080db060f.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liveplottingloggingbdbd4ce0-4a89-4434-a45f-103fc1c4d361.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liveplottingloggingb1842012-2979-4028-add2-830c6b41d020.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liveplottinglogginga019d27d-a39d-4115-90de-1f549d7d9313.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling8989240d-893d-47a6-b3a0-d19798d081fb.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingcc1d6a1b-8b3b-495e-90a9-31606affb832.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingddf00c8b-b026-4cd1-be1e-8b0d6251e6ca.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingfa43e56d-cda8-40fa-bd3a-77d1ba07a581.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling68cdb135-e191-42ef-8ed4-5f00ce0435a4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="177" column="101" lean-forward="true" selection-start-line="177" selection-start-column="101" selection-end-line="177" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1538915913867" expanded="true" signature="6649:6658" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="159" column="14" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1538907800861" expanded="true" signature="1020:1068" ph="..." />
-            <marker date="1538907800861" expanded="true" signature="2141:2306" ph="..." />
-            <marker date="1538907800861" expanded="true" signature="3500:3505" ph="..." />
+            <element signature="e#5350#6188#0" />
+            <marker date="1538917116727" expanded="true" signature="440:671" ph="..." />
+            <marker date="1538917116727" expanded="true" signature="1324:1373" ph="..." />
+            <marker date="1538917116727" expanded="true" signature="2446:2612" ph="..." />
+            <marker date="1538917116727" expanded="true" signature="3901:3906" ph="..." />
           </folding>
         </state>
       </provider>

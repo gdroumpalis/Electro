@@ -11,14 +11,20 @@ from threading import Thread
 
 class RenderingThreadLooper:
 
-    def __init__(self, target):
+    def __init__(self, target, timeout=-1 , name = "Processing_Thread"):
         self.executing = True
         self.runnablemethod = target
+        self.timeout = timeout
+        self.threadname = name
 
     def executiontarget(self):
-        while self.executing:
-            self.runnablemethod()
-
+        if self.timeout == -1:
+            while self.executing:
+                self.runnablemethod()
+        else:
+            for i in range(0, self.timeout):
+                self.runnablemethod()
+                print(i)
 
     def finishexecution(self):
         self.executing = False
@@ -26,7 +32,7 @@ class RenderingThreadLooper:
 
     def run(self):
         self.renderthread = Thread(target=self.executiontarget)
-        self.renderthread.setName("Rendering_thread")
+        self.renderthread.setName(self.threadname)
         self.renderthread.start()
         print(self.renderthread.name + " started")
 
@@ -38,15 +44,18 @@ class RendererOperationsType(Enum):
 
 
 def releaseresources():
+    global f,ser,loopers
     if f is not None:
         f.close()
     ser.close()
     for looper in loopers:
         looper.finishexecution()
+    del loopers[:]
 
 def attachloopertogloballooperpool(looper):
     global loopers
     loopers.append(looper)
+
 
 def GetOperationMethodFromArgs(argv: int) -> RendererOperationsType:
     type = int(argv[1])
@@ -109,6 +118,7 @@ def GetFileLogging(argv):
         else:
             return False
 
+
 loopers = []
 RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
 terminallogging = GetTerminalLogging(sys.argv)
@@ -120,19 +130,21 @@ ser = serial.Serial(devicename, baudrate, timeout=0.15)
 maxstep = GetDefaultMaxStep(sys.argv)
 timer = QtCore.QTimer()
 f = openfilewithproperfilename()
+print(RendererOperation.name)
 ### START QtApp #####
-app = QtGui.QApplication([])  # you MUST do this once (initialize things)
-####################
+if RendererOperation == RendererOperationsType.LivePlotting:
+    app = QtGui.QApplication([])  # you MUST do this once (initialize things)
+    win = pg.GraphicsWindow(title="Signal from serial port")  # creates a window
+    p = win.addPlot(title="Temp plot")  # creates empty space for the plot in the window
+    p2 = win.addPlot(title="Avg Temp Plot")
+    curve = p.plot()  # create an empty "plot" (a curve to plot)
+    curve2 = p2.plot()
 
-win = pg.GraphicsWindow(title="Signal from serial port")  # creates a window
-p = win.addPlot(title="Temp plot")  # creates empty space for the plot in the window
-p2 = win.addPlot(title="Avg Temp Plot")
-curve = p.plot()  # create an empty "plot" (a curve to plot)
-curve2 = p2.plot()
 windowWidth = 500  # width of the window displaying the curve
 Xm = linspace(0, 0, windowWidth)  # create array that will contain the relevant time series
 Am = linspace(0, 0, windowWidth)
 ptr = 1  # set first x position
+
 
 # Realtime data plot. Each time this function is called, the data display is updated
 def updateforliveplottin(f, logging, filelogging, t):
@@ -140,7 +152,7 @@ def updateforliveplottin(f, logging, filelogging, t):
     :param t:
     :type logging: bool
     """
-    global curve, curve2, ptr, Xm, Am
+    global curve, curve2, ptr, Xm, Am , ser
     Xm[:-1] = Xm[1:]  # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()  # read line (single value) from the serial port
@@ -167,25 +179,23 @@ def updateforliveplottin(f, logging, filelogging, t):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
-def updateforsampling(f, step):
-    global curve, curve2, ptr, Xm, Am
+
+def updateforsampling(f):
+    global ptr, Xm, Am ,ser
     Xm[:-1] = Xm[1:]  # shift data in the temporal mean 1 sample left
     Am[:-1] = Am[1:]
     value = ser.readline()  # read line (single value) from the serial port
-    Xm[-1] = float(value)  # vector containing the instantaneous values
+    try:
+        Xm[-1] = float(value)  # vector containing the instantaneous values
+    except:
+        Xm[-1] = 0.0
     if ptr <= 500:
         Am[-1] = sum(Xm) / ptr
     else:
         Am[-1] = sum(Xm) / len(Xm)
-    print("current temp:{} , avg temp{}".format(Xm[-1], Am[-1]))
-    f.write("datetime:{} => current temp:{} , avg temp{}\n".format(datetime.datetime.now(), Xm[-1], Am[-1]))
+    if not f.closed:
+        f.write("{0},{1}\n".format(Xm[-1], Am[-1]))
     ptr += 1  # update x position for displaying the curve
-    curve.setData(Xm)  # set the curve with this data
-    curve.setPos(ptr, 1)  # set x position in the graph to 0
-    curve2.setData(Am)
-    curve2.setPos(ptr, 1)
-    step += 1
-    QtGui.QApplication.processEvents()  # you MUST process the plot now
 
 
 def updateforhandling(f):
@@ -207,26 +217,23 @@ def updateforhandling(f):
     curve2.setPos(ptr, 1)
     QtGui.QApplication.processEvents()  # you MUST process the plot now
 
+
 if RendererOperation == RendererOperationsType.LivePlotting:
-    # TODO create file and open it. Then give it to update method
-
-    # p = Thread(target=lambda :liveplottingrenderingloop())
-    # p.start()
-    f = open(filename ,"w+")
-
-    renderlooper = RenderingThreadLooper(lambda : updateforliveplottin(f, terminallogging, filelogging, True))
+    renderlooper = RenderingThreadLooper(lambda: updateforliveplottin(f, terminallogging, filelogging, True) , name="Live Plotting Thread")
     renderlooper.run()
+
     attachloopertogloballooperpool(renderlooper)
+    renderlooper.renderthread.join()
     print("Plotting Started")
-    print(filename)
 
-elif RendererOperation == RendererOperationsType.Sampling:#TODO implement those
-    pass
-    # timer.timeout.connect(lambda: updateforsampling(filename, step))
-    # timer.setInterval(700)
-    # timer.start(0)
+elif RendererOperation == RendererOperationsType.Sampling:  # TODO implement those
 
-elif RendererOperation == RendererOperationsType.Handling:#TODO implement those
+    renderlooper = RenderingThreadLooper(lambda: updateforsampling(f), timeout=maxstep , name="Sampling Thread")
+    attachloopertogloballooperpool(renderlooper)
+    renderlooper.run()
+    print("Sampling started")
+
+elif RendererOperation == RendererOperationsType.Handling:  # TODO implement those
     pass
     # timer.timeout.connect(lambda: updateforhandling(filename))
     # timer.setInterval(700)
@@ -235,6 +242,8 @@ else:
     raise Exception("Rendering prosses cannot start")
 
 if __name__ == '__main__':
-    pg.QtGui.QApplication.instance().exec_()
-    print("UI Proccess Ended")
-    releaseresources() #TODO do not forget to update releasesources method
+    if RendererOperation == RendererOperationsType.LivePlotting:
+        pg.QtGui.QApplication.instance().exec_()
+        print("UI Proccess Ended")
+
+    releaseresources()  # TODO do not forget to update releasesources method

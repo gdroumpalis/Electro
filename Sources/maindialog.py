@@ -181,8 +181,11 @@ class MainUI(QMainWindow):
                    str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked())])
 
     def startsampling(self):
-        # TODO Implement sampling function
-        pass
+        print(__file__)
+        check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+               str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
+               self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
+               "None", "True"])
 
     def startmonitoring(self):
         # TODO implement monitoring.. this is affected by handlers.
@@ -220,3 +223,11 @@ class MainUI(QMainWindow):
             return os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
         else:
             return os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+
+    def getcompbinedfilename2(self):
+        if self.ui.customnamecheckbox.isChecked():
+            return os.path.join(self.ui.filepathlineedit_2.text(), self.ui.filename2.text())
+        else:
+            return os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
+
+

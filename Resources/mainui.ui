@@ -137,8 +137,14 @@
               <layout class="QGridLayout" name="gridLayout_7">
                <item row="0" column="0">
                 <widget class="QCheckBox" name="liveplottingcheckbox">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="text">
                   <string>Live Plotting</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -301,7 +307,7 @@
                     </size>
                    </property>
                    <property name="minimum">
-                    <number>200</number>
+                    <number>10</number>
                    </property>
                    <property name="maximum">
                     <number>5000</number>
