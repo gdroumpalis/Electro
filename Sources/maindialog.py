@@ -12,10 +12,13 @@ class RendererOperationsType(Enum):
     LivePlotting = 1
     Sampling = 2
     Handling = 3
+    OfflineRendering = 4
+
+filename2 = ""
+filename = ""
 
 
 # TODO See if RunsOnRaspberry could be readonly
-# TODO test renderer with timer
 # TODO See What is going on with Handlers
 # TODO do some refactoring for utilities
 
@@ -107,9 +110,6 @@ class MainUI(QMainWindow):
             self.fillcombowithnone()
 
     def deviceaddtocombo(self, dev):
-        # if MainUI.RunsOnRaspberry:
-        #     self.ui.selecteddevicecombobox.addItem(dev.replace("\n",""))
-        # else:
         self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
 
     def fillcombowithnone(self):
@@ -171,24 +171,20 @@ class MainUI(QMainWindow):
             self.showmessagebox("There is no proper device selected")
 
     def startliveplotting(self):
-        # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
-        # TODO finish implementation off plotting. See whats going on with arguments
-        if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
+        if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():
             print(__file__)
             Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
                    str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
                    self.ui.speedspinbox.text(), self.getcompbinedfilename(), "None",
-                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked())])
+                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked()),"None"])
 
     def startsampling(self):
         print(__file__)
         check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
-               str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
-               self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
-               "None", "True"])
-        if self.ui.autoopenfilecheckbox.isChecked():
-            with open(self.getcompbinedfilename2(),"r") as r:
-                print(r.readlines()) #TODO render offline file
+                    str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
+                    self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
+                    "None", "True", str(self.ui.autoopenfilecheckbox.isChecked())])
+
 
     def startmonitoring(self):
         # TODO implement monitoring.. this is affected by handlers.
@@ -222,15 +218,19 @@ class MainUI(QMainWindow):
             print("unknown tab selected")
 
     def getcompbinedfilename(self):
+        global filename
         if self.ui.customnamecheckbox.isChecked():
-            return os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
+            filename = os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
+            return filename
         else:
-            return os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+            file = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+            return filename
 
     def getcompbinedfilename2(self):
+        global filename2
         if self.ui.customnamecheckbox_2.isChecked():
-            return os.path.join(self.ui.filepathlineedit_2.text(), self.ui.filename2.text())
+            filename2 = os.path.join(self.ui.filepathlineedit_2.text(), self.ui.filename2.text())
+            return filename2
         else:
-            return os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
-
-
+            filename2 = os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
+            return filename2

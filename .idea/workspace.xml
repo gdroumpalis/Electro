@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElectroRes_rc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroRes_rc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
     </list>
@@ -17,12 +16,13 @@
     <session id="64833180">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="10" />
-          <entry key="project.open.time.3" value="9" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.open.time.2" value="12" />
+          <entry key="project.open.time.3" value="10" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -30,37 +30,37 @@
           <entry key="f2py" value="1" />
           <entry key="gitignore" value="6" />
           <entry key="init" value="6" />
-          <entry key="py" value="144" />
+          <entry key="py" value="145" />
           <entry key="qrc" value="1" />
           <entry key="settings" value="1" />
           <entry key="test" value="1" />
           <entry key="tets" value="1" />
-          <entry key="txt" value="25" />
+          <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="151" />
+          <entry key="PLAIN_TEXT" value="41" />
+          <entry key="Python" value="152" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="" value="61" />
+          <entry key="" value="74" />
           <entry key="&quot;&quot;" value="5" />
           <entry key="Python Console" value="75" />
           <entry key="dummy" value="119" />
           <entry key="gitignore" value="60" />
           <entry key="init" value="366" />
-          <entry key="py" value="15512" />
-          <entry key="txt" value="1909" />
+          <entry key="py" value="17207" />
+          <entry key="txt" value="2023" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="2088" />
-          <entry key="Python" value="16019" />
+          <entry key="PLAIN_TEXT" value="2202" />
+          <entry key="Python" value="17727" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -80,11 +80,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="190" column="62" selection-start-line="190" selection-start-column="62" selection-end-line="190" selection-end-column="62" />
+            <state relative-caret-position="300">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1538938443759" expanded="true" signature="6649:6658" ph="..." />
+                <marker date="1539518127251" expanded="true" signature="6580:6581" ph="..." />
               </folding>
             </state>
           </provider>
@@ -102,33 +102,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <marker date="1538937441833" expanded="true" signature="470:701" ph="..." />
-                <marker date="1538937441833" expanded="true" signature="1410:1459" ph="..." />
-                <marker date="1538937441833" expanded="true" signature="2532:2698" ph="..." />
-                <marker date="1538937441833" expanded="true" signature="3987:3992" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="267" selection-start-line="267" selection-end-line="267" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.5/site-packages/serial/serialutil.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="239" selection-start-line="239" selection-end-line="239" />
+              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+                <marker date="1539518126124" expanded="true" signature="228:234" ph="..." />
+                <marker date="1539518126124" expanded="true" signature="493:724" ph="..." />
+                <marker date="1539518126124" expanded="true" signature="1521:1578" ph="..." />
+                <marker date="1539518126124" expanded="true" signature="2807:3206" ph="..." />
+                <marker date="1539518126124" expanded="true" signature="4663:4672" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,6 +129,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>timer</find>
+      <find>RunsOnRaspberry</find>
+      <find>qmessage</find>
+      <find>offline</find>
+      <find>sampling</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,6 +144,28 @@
       </map>
     </option>
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GotoClassSymbolConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="yaml" />
+      <filtered-out-file-type name="XML" />
+      <filtered-out-file-type name="XHTML" />
+      <filtered-out-file-type name="ReST" />
+      <filtered-out-file-type name="RELAX-NG" />
+      <filtered-out-file-type name="RegExp" />
+      <filtered-out-file-type name="Properties" />
+      <filtered-out-file-type name="TEXT" />
+      <filtered-out-file-type name="Markdown" />
+      <filtered-out-file-type name="JSON" />
+      <filtered-out-file-type name="JSON5" />
+      <filtered-out-file-type name="BuildoutCfg" />
+      <filtered-out-file-type name="CfgrLanguage" />
+      <filtered-out-file-type name="CommandLine" />
+      <filtered-out-file-type name="DTD" />
+      <filtered-out-file-type name="HTML" />
+      <filtered-out-file-type name="Ini" />
+      <filtered-out-file-type name="JQL" />
+    </file-type-list>
   </component>
   <component name="HierarchyBrowserManager">
     <option name="SCOPE" value="All" />
@@ -233,11 +242,6 @@
             <path>
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Renderer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,8 +262,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;pyqt&#9;FILE&#9;file:///home/terminux/Apps/pycharm-community-2018.2.2/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py&#10;mrend&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;ign&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;igno&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;i&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init.py&#10;m&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mren&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;initi&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="SearchEverywhereHistoryKey" value="MRenderer&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mrend&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;pyqt&#9;FILE&#9;file:///home/terminux/Apps/pycharm-community-2018.2.2/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py&#10;ign&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;igno&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;i&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init.py&#10;m&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mren&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;initi&#9;null&#9;null" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -646,7 +650,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538917238552</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix custom name for sampling. add todo and printing sampled file(test).&#10;refactor renderloopthread wait.">
+      <created>1538938606868</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1538938606868</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -662,20 +673,20 @@
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="1920" y="28" width="819" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
-      <window_info x="2153" y="28" width="889" height="1052" id="Structure" order="1" type="WINDOWED" weight="0.25" />
+      <window_info content_ui="combo" x="1920" y="28" width="849" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
+      <window_info x="2143" y="28" width="909" height="1052" id="Structure" order="1" type="WINDOWED" visible="true" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.22890295" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3286334" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.3762162" />
+      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Version Control" order="4" sideWeight="0.4975715" weight="0.37418655" />
       <window_info anchor="bottom" auto_hide="true" x="1957" y="632" width="1863" height="407" id="Run" order="5" sideWeight="0.4975715" weight="0.3286334" />
-      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" x="1920" y="28" width="1920" height="1052" id="Debug" order="6" type="WINDOWED" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.489154" />
-      <window_info anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" weight="0.43600866" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.47505423" />
+      <window_info anchor="bottom" x="0" y="388" width="1916" height="308" id="Terminal" order="10" weight="0.40347072" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -820,7 +831,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prototype 4 ui. remove settings ui components" />
     <MESSAGE value="Add basic options on the UIs" />
     <MESSAGE value="Add resources. Some ui implementation. Listview research." />
     <MESSAGE value="tab cases. disable ui component when they are not needed" />
@@ -845,14 +855,15 @@
     <MESSAGE value="Add some todos. Remove toggle Autorange" />
     <MESSAGE value="refactoring rendering. New loopersthread class. fix file closing error" />
     <MESSAGE value="sampling rendering." />
-    <option name="LAST_COMMIT_MESSAGE" value="sampling rendering." />
+    <MESSAGE value="fix custom name for sampling. add todo and printing sampled file(test).&#10;refactor renderloopthread wait." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix custom name for sampling. add todo and printing sampled file(test).&#10;refactor renderloopthread wait." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>48</line>
+          <line>50</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -862,18 +873,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
-          <line>182</line>
+          <line>180</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sources/maindialog.py</url>
-          <line>178</line>
+          <line>176</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Renderer/MRenderer.py</url>
-          <line>136</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -935,47 +941,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72580">
-          <caret line="3629" column="8" selection-start-line="3629" selection-start-column="8" selection-end-line="3629" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/PyQt5/QtWidgets/QAbstractSpinBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4220">
-          <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/arguments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init" />
-    <entry file="file://$PROJECT_DIR$/Examples/initialrenderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bin/f2py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5420">
@@ -1088,46 +1053,17 @@
     <entry file="file://$PROJECT_DIR$/liveplottingloggingb1842012-2979-4028-add2-830c6b41d020.txt" />
     <entry file="file://$PROJECT_DIR$/liveplottinglogginga019d27d-a39d-4115-90de-1f549d7d9313.txt" />
     <entry file="file://$PROJECT_DIR$/sampling8989240d-893d-47a6-b3a0-d19798d081fb.txt" />
-    <entry file="file://$PROJECT_DIR$/samplingcc1d6a1b-8b3b-495e-90a9-31606affb832.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingfa43e56d-cda8-40fa-bd3a-77d1ba07a581.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling68cdb135-e191-42ef-8ed4-5f00ce0435a4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingddf00c8b-b026-4cd1-be1e-8b0d6251e6ca.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling1b043d9f-ff67-4b0b-a13b-48857e04e0a8.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling2e6f642e-9dde-4c88-8f7f-9cee2687c750.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingc6efba38-9a7c-4b1a-884d-78fab88af305.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingb8a3cfa0-85e3-4a2a-9183-96504e3744a0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling0375cd3a-1518-4379-8853-b0f3951c2db2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling17b347bf-1113-42e8-859f-349a143b3701.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling5e19910d-68d7-4616-8a56-57c86872edaf.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingcc1d6a1b-8b3b-495e-90a9-31606affb832.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingfa43e56d-cda8-40fa-bd3a-77d1ba07a581.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling68cdb135-e191-42ef-8ed4-5f00ce0435a4.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingddf00c8b-b026-4cd1-be1e-8b0d6251e6ca.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling1b043d9f-ff67-4b0b-a13b-48857e04e0a8.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling2e6f642e-9dde-4c88-8f7f-9cee2687c750.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingc6efba38-9a7c-4b1a-884d-78fab88af305.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingb8a3cfa0-85e3-4a2a-9183-96504e3744a0.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling0375cd3a-1518-4379-8853-b0f3951c2db2.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling17b347bf-1113-42e8-859f-349a143b3701.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling5e19910d-68d7-4616-8a56-57c86872edaf.txt" />
     <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1142,27 +1078,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/samplingf8d10ef0-3a7d-4ba6-829b-794830a29f57.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingc44cc5fc-ae61-41b8-8759-a2370dc324ca.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingb3c5643d-daf6-421b-9fca-eec091950d90.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling81de6d76-1e96-4954-9c84-8b288a550473.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling5df4e175-e0a9-42a6-bfaa-8eb1b5021501.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling1ca22ead-65f5-4afa-bb63-f867e8b178aa.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingc2a8bcd1-2102-4bea-a56a-10851af57fcd.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+        <state relative-caret-position="289">
+          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1538937441833" expanded="true" signature="470:701" ph="..." />
-            <marker date="1538937441833" expanded="true" signature="1410:1459" ph="..." />
-            <marker date="1538937441833" expanded="true" signature="2532:2698" ph="..." />
-            <marker date="1538937441833" expanded="true" signature="3987:3992" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1539518126124" expanded="true" signature="228:234" ph="..." />
+            <marker date="1539518126124" expanded="true" signature="493:724" ph="..." />
+            <marker date="1539518126124" expanded="true" signature="1521:1578" ph="..." />
+            <marker date="1539518126124" expanded="true" signature="2807:3206" ph="..." />
+            <marker date="1539518126124" expanded="true" signature="4663:4672" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="190" column="62" selection-start-line="190" selection-start-column="62" selection-end-line="190" selection-end-column="62" />
+        <state relative-caret-position="300">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1538938443759" expanded="true" signature="6649:6658" ph="..." />
+            <marker date="1539518127251" expanded="true" signature="6580:6581" ph="..." />
           </folding>
         </state>
       </provider>
