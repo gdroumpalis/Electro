@@ -105,3 +105,6 @@ venv.bak/
 
 /Sources/devices.txt
 /Sources/settings
+devices.txt
+settings
+log.txt

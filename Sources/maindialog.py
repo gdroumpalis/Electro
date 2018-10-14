@@ -3,24 +3,35 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem,
 import UI.mainui
 from Utilities.GlobalUtilities import *
 from Sources.settingsdialog import SettingUI
-from subprocess import check_call, call
+from subprocess import check_call, call, Popen
 import os
+import uuid
+
+
+class RendererOperationsType(Enum):
+    LivePlotting = 1
+    Sampling = 2
+    Handling = 3
+    OfflineRendering = 4
+
+filename2 = ""
+filename = ""
 
 
 # TODO See if RunsOnRaspberry could be readonly
-# TODO test renderer with timer
 # TODO See What is going on with Handlers
 # TODO do some refactoring for utilities
 
 class MainUI(QMainWindow):
     RunsOnRaspberry = False
 
-    def __init__(self, rasp):
+    def __init__(self, rasp, initfilepath):
         """
 
         :type runsonraspberry: bool
         """
         super().__init__()
+        self.initfilepath = initfilepath
         self.ui = UI.mainui.Ui_MainWindow()
         MainUI.RunsOnRaspberry = rasp
         self.ui.setupUi(self)
@@ -74,6 +85,7 @@ class MainUI(QMainWindow):
         connect(self.ui.filecheckbox.clicked, self.setfilepathenabled)
         connect(self.ui.actionRestore_Tab.triggered, self.restoretaboptions)
         connect(self.ui.actionRestore_All.triggered, self.restorealloptions)
+        connect(self.ui.actionOpen_Plot_File.triggered , self.offlinerenderopenedplotfile)
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -99,10 +111,7 @@ class MainUI(QMainWindow):
             self.fillcombowithnone()
 
     def deviceaddtocombo(self, dev):
-        if MainUI.RunsOnRaspberry:
-            self.ui.selecteddevicecombobox.addItem(dev.replace("\n"))
-        else:
-            self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
+        self.ui.selecteddevicecombobox.addItem("/dev/" + dev.replace("\n", ""))
 
     def fillcombowithnone(self):
         self.clearcombo()
@@ -163,15 +172,20 @@ class MainUI(QMainWindow):
             self.showmessagebox("There is no proper device selected")
 
     def startliveplotting(self):
-        # call("python35 ../Renderer/MRenderer.py ",args=,shell=True)
-        # TODO finish implementation off plotting. See whats going on with arguments
-        if self.ui.loggingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():  # todo check if this is right
-            call([self.getpythonversion(), "../Renderer/MRenderer.py", self.ui.selecteddevicecombobox.currentText(),
-                  self.ui.speedspinbox.text(), self.ui.filename.text()])
+        if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():
+            print(__file__)
+            Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+                   str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
+                   self.ui.speedspinbox.text(), self.getcompbinedfilename(), "None",
+                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked()),"None"])
 
     def startsampling(self):
-        # TODO Implement sampling function
-        pass
+        print(__file__)
+        check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+                    str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
+                    self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
+                    "None", "True", str(self.ui.autoopenfilecheckbox.isChecked())])
+
 
     def startmonitoring(self):
         # TODO implement monitoring.. this is affected by handlers.
@@ -199,8 +213,35 @@ class MainUI(QMainWindow):
         elif selectedtab is self.ui.samplingtab:
             self.initializesamplingtab()
         elif selectedtab is self.ui.handlerslist:
-            #TODO clear handler tab
+            # TODO clear handler tab
             pass
         else:
             print("unknown tab selected")
 
+    def getcompbinedfilename(self):
+        global filename
+        if self.ui.customnamecheckbox.isChecked():
+            filename = os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
+            return filename
+        else:
+            file = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+            return filename
+
+    def getcompbinedfilename2(self):
+        global filename2
+        if self.ui.customnamecheckbox_2.isChecked():
+            filename2 = os.path.join(self.ui.filepathlineedit_2.text(), self.ui.filename2.text())
+            return filename2
+        else:
+            filename2 = os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
+            return filename2
+
+    def offlinerenderopenedplotfile(self):
+        file, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileNames()", "",
+                                                "All Files (*)")
+        if file:
+            print(file)
+            check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+                        str(RendererOperationsType.OfflineRendering.value), self.ui.selecteddevicecombobox.currentText(),
+                    self.ui.speedspinbox.text(), file, "None",
+                        "None", "True", "None"])
