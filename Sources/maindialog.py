@@ -85,6 +85,7 @@ class MainUI(QMainWindow):
         connect(self.ui.filecheckbox.clicked, self.setfilepathenabled)
         connect(self.ui.actionRestore_Tab.triggered, self.restoretaboptions)
         connect(self.ui.actionRestore_All.triggered, self.restorealloptions)
+        connect(self.ui.actionOpen_Plot_File.triggered , self.offlinerenderopenedplotfile)
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -234,3 +235,13 @@ class MainUI(QMainWindow):
         else:
             filename2 = os.path.join(self.ui.filepathlineedit_2.text(), "sampling{0}.txt".format(uuid.uuid4()))
             return filename2
+
+    def offlinerenderopenedplotfile(self):
+        file, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileNames()", "",
+                                                "All Files (*)")
+        if file:
+            print(file)
+            check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
+                        str(RendererOperationsType.OfflineRendering.value), self.ui.selecteddevicecombobox.currentText(),
+                    self.ui.speedspinbox.text(), file, "None",
+                        "None", "True", "None"])

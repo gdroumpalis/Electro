@@ -9,6 +9,7 @@ import datetime
 import sys
 from threading import Thread
 
+
 class RenderingThreadLooper:
 
     def __init__(self, target, timeout=-1, name="Processing_Thread"):
@@ -47,6 +48,7 @@ class RendererOperationsType(Enum):
     Handling = 3
     OfflineRendering = 4
 
+
 if __name__ == '__main__':
     def releaseresources():
         global f, ser, loopers
@@ -71,6 +73,8 @@ if __name__ == '__main__':
             return RendererOperationsType.Sampling
         elif type == 3:
             return RendererOperationsType.Handling
+        elif type == 4:
+            return RendererOperationsType.OfflineRendering
 
 
     def openfilewithproperfilename():
@@ -134,7 +138,9 @@ if __name__ == '__main__':
             else:
                 return False
 
+
     loopers = []
+    ser = 0
     RendererOperation = GetOperationMethodFromArgs(sys.argv)  # type: RendererOperationsType
     terminallogging = GetTerminalLogging(sys.argv)
     filelogging = GetFileLogging(sys.argv)
@@ -144,10 +150,11 @@ if __name__ == '__main__':
     ser = serial.Serial(devicename, baudrate, timeout=0.15)
     maxstep = GetDefaultMaxStep(sys.argv)
     autoofflinerender = GetAutoOfflineRendering(sys.argv)
-    f = openfilewithproperfilename()
+    if RendererOperation != RendererOperationsType.OfflineRendering:
+        f = openfilewithproperfilename()
     print(RendererOperation.name)
     ### START QtApp #####
-    if RendererOperation == RendererOperationsType.LivePlotting or autoofflinerender:
+    if RendererOperation == RendererOperationsType.LivePlotting or autoofflinerender or RendererOperation== RendererOperationsType.OfflineRendering:
         app = QtGui.QApplication([])  # you MUST do this once (initialize things)
         win = pg.GraphicsWindow(title="Signal from serial port")  # creates a window
         p = win.addPlot(title="Temp plot")  # creates empty space for the plot in the window
@@ -251,6 +258,8 @@ if __name__ == '__main__':
         curve2.setData(avgtemp)
         QtGui.QApplication.processEvents()
         print("exiting")
+        offlinerenderingfile.close()
+
 
     if RendererOperation == RendererOperationsType.LivePlotting:
         renderlooper = RenderingThreadLooper(lambda: updateforliveplottin(f, terminallogging, filelogging, True),
@@ -270,6 +279,12 @@ if __name__ == '__main__':
             print("entered")
             offlinerendering(filename)
 
+    elif RendererOperation == RendererOperationsType.OfflineRendering:
+        print("entered")
+        print(filename)
+        offlinerendering(filename)
+
+
     elif RendererOperation == RendererOperationsType.Handling:  # TODO implement those
         pass
         # timer.timeout.connect(lambda: updateforhandling(filename))
@@ -278,9 +293,12 @@ if __name__ == '__main__':
     else:
         raise Exception("Rendering prosses cannot start")
 
-    if RendererOperation == RendererOperationsType.LivePlotting or autoofflinerender:
+    if RendererOperation == RendererOperationsType.LivePlotting or autoofflinerender or RendererOperation == RendererOperationsType.OfflineRendering:
         print("executing")
         pg.QtGui.QApplication.instance().exec_()
         print("UI Proccess Ended")
 
-    releaseresources()  # TODO do not forget to update releasesources method
+    try:
+        releaseresources()  # TODO do not forget to update releasesources method
+    except:
+        pass
