@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Renderer/MRenderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Renderer/MRenderer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/maindialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/maindialog.py" afterDir="false" />
-    </list>
+    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
         <counts>
           <entry key="git.branch.checkout.local" value="4" />
           <entry key="git.branch.create.new" value="5" />
-          <entry key="git.branch.delete.local" value="5" />
+          <entry key="git.branch.delete.local" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -81,20 +77,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4172">
+            <state relative-caret-position="280">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1539519120155" expanded="true" signature="6635:6636" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="2120">
+              <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5420">
+              <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5440">
+              <caret line="282" column="31" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -102,16 +116,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="303" column="8" selection-start-line="303" selection-start-column="8" selection-end-line="303" selection-end-column="12" />
+            <state relative-caret-position="-3892">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <marker date="1539520867191" expanded="true" signature="229:235" ph="..." />
-                <marker date="1539520867191" expanded="true" signature="494:725" ph="..." />
-                <marker date="1539520867191" expanded="true" signature="1523:1580" ph="..." />
-                <marker date="1539520867191" expanded="true" signature="2892:3292" ph="..." />
-                <marker date="1539520867191" expanded="true" signature="4897:4906" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33260">
+              <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
             </state>
           </provider>
         </entry>
@@ -134,7 +152,6 @@
       <find>offline</find>
       <find>autoofflinerender</find>
       <find>sampling</find>
-      <find>autoofflinerender</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,7 +159,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="renderers" />
       </map>
     </option>
     <option name="RESET_MODE" value="HARD" />
@@ -222,17 +239,17 @@
             <path>
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Renderer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
               <item name="Electro" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Electro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Electro" type="462c0819:PsiDirectoryNode" />
-              <item name="Sources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -261,6 +278,125 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Examples" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ElectroRes_rc.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Renderer/MRenderer.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Resources/mainui.ui</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sources/maindialog.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/UI/mainui.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Utilities/GlobalUtilities.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/init.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log.txt</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -660,7 +796,7 @@
     <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="1920" y="28" width="859" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
+      <window_info content_ui="combo" x="1920" y="28" width="859" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
       <window_info x="2143" y="28" width="909" height="1052" id="Structure" order="1" type="WINDOWED" visible="true" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.22890295" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.329718" />
@@ -984,8 +1120,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+        <state relative-caret-position="2120">
+          <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1010,8 +1146,8 @@
     <entry file="file://$PROJECT_DIR$/sampling5e19910d-68d7-4616-8a56-57c86872edaf.txt" />
     <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="267" selection-start-line="267" selection-end-line="267" />
+        <state relative-caret-position="5440">
+          <caret line="282" column="31" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1022,59 +1158,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samplingf8d10ef0-3a7d-4ba6-829b-794830a29f57.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingc44cc5fc-ae61-41b8-8759-a2370dc324ca.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingb3c5643d-daf6-421b-9fca-eec091950d90.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling81de6d76-1e96-4954-9c84-8b288a550473.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling5df4e175-e0a9-42a6-bfaa-8eb1b5021501.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling1ca22ead-65f5-4afa-bb63-f867e8b178aa.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingc2a8bcd1-2102-4bea-a56a-10851af57fcd.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/samplingf8d10ef0-3a7d-4ba6-829b-794830a29f57.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingc44cc5fc-ae61-41b8-8759-a2370dc324ca.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingb3c5643d-daf6-421b-9fca-eec091950d90.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling81de6d76-1e96-4954-9c84-8b288a550473.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling5df4e175-e0a9-42a6-bfaa-8eb1b5021501.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling1ca22ead-65f5-4afa-bb63-f867e8b178aa.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingc2a8bcd1-2102-4bea-a56a-10851af57fcd.txt" />
     <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4172">
+        <state relative-caret-position="280">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1539519120155" expanded="true" signature="6635:6636" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sampling38c4d1aa-821d-4d96-b3c9-5d6f1afbe8ba.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling230e5ba5-0bae-4642-b1c3-4e1b16e17e31.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samplingc9490973-ce88-40fa-87f8-430cc450281b.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sampling968c7f8c-cd82-4fb0-821d-9b264cbdd353.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sampling38c4d1aa-821d-4d96-b3c9-5d6f1afbe8ba.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling230e5ba5-0bae-4642-b1c3-4e1b16e17e31.txt" />
+    <entry file="file://$PROJECT_DIR$/samplingc9490973-ce88-40fa-87f8-430cc450281b.txt" />
+    <entry file="file://$PROJECT_DIR$/test" />
+    <entry file="file://$PROJECT_DIR$/test.txt" />
+    <entry file="file://$PROJECT_DIR$/sampling968c7f8c-cd82-4fb0-821d-9b264cbdd353.txt" />
     <entry file="file://$PROJECT_DIR$/Sources/RendererUtilities.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1082,20 +1188,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/george">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/george" />
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="303" column="8" selection-start-line="303" selection-start-column="8" selection-end-line="303" selection-end-column="12" />
+        <state relative-caret-position="-3892">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1539520867191" expanded="true" signature="229:235" ph="..." />
-            <marker date="1539520867191" expanded="true" signature="494:725" ph="..." />
-            <marker date="1539520867191" expanded="true" signature="1523:1580" ph="..." />
-            <marker date="1539520867191" expanded="true" signature="2892:3292" ph="..." />
-            <marker date="1539520867191" expanded="true" signature="4897:4906" ph="..." />
           </folding>
         </state>
       </provider>
