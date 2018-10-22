@@ -285,11 +285,9 @@ if __name__ == '__main__':
         offlinerendering(filename)
 
 
-    elif RendererOperation == RendererOperationsType.Handling:  # TODO implement those
+    elif RendererOperation == RendererOperationsType.Handling: #Not Used
         pass
-        # timer.timeout.connect(lambda: updateforhandling(filename))
-        # timer.setInterval(700)
-        # timer.start(0)
+
     else:
         raise Exception("Rendering prosses cannot start")
 
