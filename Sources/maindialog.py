@@ -187,6 +187,8 @@ class MainUI(QMainWindow):
 
     def startmainproc(self):
         if self.ui.selecteddevicecombobox.findText("None"):
+            if self.ui.monitoringlabel.isVisible():
+                return
             selectedtab = self.ui.tabWidget.currentWidget()
             if selectedtab is self.ui.liveplottingtab:
                 self.startliveplotting()
@@ -226,7 +228,8 @@ class MainUI(QMainWindow):
                                                                                  threshold=self.ui.temperaturespinbox.value(),
                                                                                  message=self.ui.printedmessage.text(),
                                                                                  shell=self.ui.shellaction.text())
-                                                                                , name="Monitoring Thread")
+                                                                                , name="Monitoring Thread" ,
+                                                    onfinishexecution=lambda: self.ui.monitoringlabel.setVisible(False) )
             self.monitorthread = monitorthread
             monitorthread.run()
 
@@ -255,12 +258,14 @@ class MainUI(QMainWindow):
             pass
 
     def executioncase(self, action, handleroperation, thread, message="", shell=""):
-        if handleroperation == HandlerIndex.Shell:
-            pass #TODO implement shell execution
+        if handleroperation == HandlerIndex.Shell.value:
+            print("entered "+shell)
+            call(shell , shell=True)
+            thread.finishexecution()
         elif action == ElectroAction.PrintMessage.value:
             print(message)
             thread.finishexecution()
-        elif action == ElectroAction.Terminate:
+        elif action == ElectroAction.Terminate.value:
             thread.finishexecution()
 
     def getpythonversion(self) -> str:
