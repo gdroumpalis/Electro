@@ -1,3 +1,5 @@
+from pickle import FALSE
+
 from PyQt5.QtCore import QSize
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QListWidgetItem, QMessageBox, QFileDialog
 import UI.mainui
@@ -6,6 +8,7 @@ from Sources.settingsdialog import SettingUI
 from subprocess import check_call, call, Popen
 import os
 import uuid
+import serial
 
 
 class RendererOperationsType(Enum):
@@ -14,13 +17,24 @@ class RendererOperationsType(Enum):
     Handling = 3
     OfflineRendering = 4
 
+
+class HandlerIndex(Enum):
+    Shell = 0
+    Electro = 1
+
+
+class Operator(Enum):
+    Greater = 0
+    Lesser = 1
+
+
+class ElectroAction(Enum):
+    PrintMessage = 0
+    Terminate = 1
+
+
 filename2 = ""
 filename = ""
-
-
-# TODO See if RunsOnRaspberry could be readonly
-# TODO See What is going on with Handlers
-# TODO do some refactoring for utilities
 
 class MainUI(QMainWindow):
     RunsOnRaspberry = False
@@ -32,6 +46,7 @@ class MainUI(QMainWindow):
         """
         super().__init__()
         self.initfilepath = initfilepath
+        self.monitorthread = None
         self.ui = UI.mainui.Ui_MainWindow()
         MainUI.RunsOnRaspberry = rasp
         self.ui.setupUi(self)
@@ -48,6 +63,26 @@ class MainUI(QMainWindow):
     def initializewidgets(self):
         self.initializeliveplottingtab()
         self.initializesamplingtab()
+        self.initializehandlertab()
+
+    def initializehandlertab(self):
+        self.stopmonitorthread()
+        self.ui.printedmessage.clear()
+        self.ui.electroactions.clear()
+        self.ui.handleractiontype.clear()
+        self.ui.handleractiontype.addItem("Shell Script", HandlerIndex.Shell.value)
+        self.ui.handleractiontype.addItem("Electro Action", HandlerIndex.Electro.value)
+        self.ui.electroactions.addItem("Print Message", ElectroAction.PrintMessage.value)
+        self.ui.electroactions.addItem("Terminate Connection", ElectroAction.Terminate.value)
+        self.ui.electroactions.setVisible(False)
+        self.ui.handleractiontype.setCurrentIndex(HandlerIndex.Shell.value)
+        self.ui.temperaturespinbox.setValue(0)
+        self.ui.operatorcombo.setCurrentIndex(0)
+        self.ui.operatorcombo.clear()
+        self.ui.operatorcombo.addItem(">", Operator.Greater.value)
+        self.ui.operatorcombo.addItem("<", Operator.Lesser.value)
+        self.ui.temperaturespinbox.setValue(50)
+        self.ui.monitoringlabel.setVisible(False)
 
     def initializesamplingtab(self):
         self.ui.customnamecheckbox_2.setChecked(False)
@@ -73,8 +108,6 @@ class MainUI(QMainWindow):
     def connectuicomponetstosignal(self):
         connect(self.ui.actionClose.triggered, self.closeapplication)
         connect(self.ui.actionopen_settings.triggered, self.opensettingsdialog)
-        connect(self.ui.addhandlerbutton.clicked, self.addhandler)
-        connect(self.ui.removehandlerbutton.clicked, self.removehandler)
         connect(self.ui.actionRefresh_Devices.triggered, self.initializeelectro)
         connect(self.ui.actionClear_Device_List.triggered, self.fillcombowithnone)
         connect(self.ui.filepathtoolbutton.clicked, self.selectfilepath)
@@ -85,7 +118,21 @@ class MainUI(QMainWindow):
         connect(self.ui.filecheckbox.clicked, self.setfilepathenabled)
         connect(self.ui.actionRestore_Tab.triggered, self.restoretaboptions)
         connect(self.ui.actionRestore_All.triggered, self.restorealloptions)
-        connect(self.ui.actionOpen_Plot_File.triggered , self.offlinerenderopenedplotfile)
+        connect(self.ui.actionOpen_Plot_File.triggered, self.offlinerenderopenedplotfile)
+        connect(self.ui.handleractiontype.currentIndexChanged, self.handlerindexchanged)
+        connect(self.ui.stopmonitorbutton.clicked, self.stopmonitorthread)
+
+    def handlerindexchanged(self):
+        if self.ui.handleractiontype.currentIndex() == HandlerIndex.Shell.value:
+            self.ui.electroactions.setVisible(False)
+            self.ui.shellaction.setVisible(True)
+            self.ui.printedmessage.setVisible(False)
+        elif self.ui.handleractiontype.currentIndex() == HandlerIndex.Electro.value:
+            self.ui.electroactions.setVisible(True)
+            self.ui.shellaction.setVisible(False)
+            self.ui.printedmessage.setVisible(True)
+        else:
+            pass
 
     def attachkeyboardshortcuts(self):
         self.ui.actionClose.setShortcut("ctrl+q")
@@ -120,25 +167,6 @@ class MainUI(QMainWindow):
     def clearcombo(self):
         self.ui.selecteddevicecombobox.clear()
 
-    def addhandler(self):
-        # test = QListElectroItem()
-        # test.setText("hello"+str(self.counter))
-        # test.Metallica = "lalalalalalalalal" + str(self.counter)
-        # self.counter+= 1
-        # self.ui.handlerslist.addItem(test)
-        pass
-
-    def removehandler(self):
-        # test = self.ui.handlerslist.takeItem(self.ui.handlerslist.currentRow())
-        # del test
-        pass
-
-    def printmessage(self):
-        # mb  = QMessageBox()
-        # mb.setText(self.ui.handlerslist.currentItem().Metallica)
-        # mb.exec_()
-        pass
-
     def selectfilepath(self):
         self.ui.filepathlineedit.setText(str(QFileDialog.getExistingDirectory(self, "Select Save path")))
 
@@ -159,12 +187,14 @@ class MainUI(QMainWindow):
 
     def startmainproc(self):
         if self.ui.selecteddevicecombobox.findText("None"):
+            if self.ui.monitoringlabel.isVisible():
+                return
             selectedtab = self.ui.tabWidget.currentWidget()
             if selectedtab is self.ui.liveplottingtab:
                 self.startliveplotting()
             elif selectedtab is self.ui.samplingtab:
                 self.startsampling()
-            elif selectedtab is self.ui.handlerslist:
+            elif selectedtab is self.ui.handlerstab:
                 self.startmonitoring()
             else:
                 print("unknown tab selected")
@@ -177,7 +207,7 @@ class MainUI(QMainWindow):
             Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
                    str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
                    self.ui.speedspinbox.text(), self.getcompbinedfilename(), "None",
-                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked()),"None"])
+                   str(self.ui.loggingcheckbox.isChecked()), str(self.ui.filecheckbox.isChecked()), "None"])
 
     def startsampling(self):
         print(__file__)
@@ -186,10 +216,57 @@ class MainUI(QMainWindow):
                     self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
                     "None", "True", str(self.ui.autoopenfilecheckbox.isChecked())])
 
-
     def startmonitoring(self):
-        # TODO implement monitoring.. this is affected by handlers.
-        pass
+        ser = serial.Serial(self.ui.selecteddevicecombobox.currentText(), self.ui.speedspinbox.text(), timeout=0.15)
+        self.ui.monitoringlabel.setVisible(True)
+        try:
+            from Renderer.MRenderer import RenderingThreadLooper
+            monitorthread = RenderingThreadLooper(lambda: self.executemonitoring(ser, thread=self.monitorthread,
+                                                                                 action=self.ui.electroactions.currentIndex(),
+                                                                                 handleroperation=self.ui.handleractiontype.currentIndex(),
+                                                                                 operator=self.ui.operatorcombo.currentIndex(),
+                                                                                 threshold=self.ui.temperaturespinbox.value(),
+                                                                                 message=self.ui.printedmessage.text(),
+                                                                                 shell=self.ui.shellaction.text())
+                                                                                , name="Monitoring Thread" ,
+                                                    onfinishexecution=lambda: self.ui.monitoringlabel.setVisible(False) )
+            self.monitorthread = monitorthread
+            monitorthread.run()
+
+        finally:
+            pass  # ser.close()
+
+    def stopmonitorthread(self):
+        self.ui.monitoringlabel.setVisible(False)
+        if self.monitorthread is not None:
+            self.monitorthread.finishexecution()
+
+    def executemonitoring(self, ser, thread, action, handleroperation ,operator, threshold, message="", shell=""):
+        try:
+            value = float(ser.readline())
+
+            if operator == Operator.Greater.value:
+                if value > threshold:
+                    self.executioncase(action=action, handleroperation=handleroperation ,thread=thread, message=message, shell=shell)
+
+            if operator == Operator.Lesser.value:
+                if value < threshold:
+                    self.executioncase(action= action,handleroperation=handleroperation ,thread=thread, message=message, shell=shell)
+
+            print(float(ser.readline()))
+        except:
+            pass
+
+    def executioncase(self, action, handleroperation, thread, message="", shell=""):
+        if handleroperation == HandlerIndex.Shell.value:
+            print("entered "+shell)
+            call(shell , shell=True)
+            thread.finishexecution()
+        elif action == ElectroAction.PrintMessage.value:
+            print(message)
+            thread.finishexecution()
+        elif action == ElectroAction.Terminate.value:
+            thread.finishexecution()
 
     def getpythonversion(self) -> str:
         if MainUI.RunsOnRaspberry:
@@ -212,9 +289,8 @@ class MainUI(QMainWindow):
             self.initializeliveplottingtab()
         elif selectedtab is self.ui.samplingtab:
             self.initializesamplingtab()
-        elif selectedtab is self.ui.handlerslist:
-            # TODO clear handler tab
-            pass
+        elif selectedtab is self.ui.handlerstab:
+            self.initializehandlertab()
         else:
             print("unknown tab selected")
 
@@ -238,10 +314,11 @@ class MainUI(QMainWindow):
 
     def offlinerenderopenedplotfile(self):
         file, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileNames()", "",
-                                                "All Files (*)")
+                                              "All Files (*)")
         if file:
             print(file)
             check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
-                        str(RendererOperationsType.OfflineRendering.value), self.ui.selecteddevicecombobox.currentText(),
-                    self.ui.speedspinbox.text(), file, "None",
+                        str(RendererOperationsType.OfflineRendering.value),
+                        self.ui.selecteddevicecombobox.currentText(),
+                        self.ui.speedspinbox.text(), file, "None",
                         "None", "True", "None"])

@@ -12,12 +12,13 @@ from threading import Thread
 
 class RenderingThreadLooper:
 
-    def __init__(self, target, timeout=-1, name="Processing_Thread"):
+    def __init__(self, target, timeout=-1, name="Processing_Thread" , onfinishexecution = None):
         self.executing = True
         self.runnablemethod = target
         self.timeout = timeout
         self.threadname = name
         self.renderthread = None
+        self.onfinishexec = onfinishexecution
 
     def executiontarget(self):
         if self.timeout == -1:
@@ -30,6 +31,8 @@ class RenderingThreadLooper:
 
     def finishexecution(self):
         self.executing = False
+        if self.onfinishexec is not None:
+            self.onfinishexec()
         print(self.renderthread.name + " finished")
 
     def run(self):
@@ -285,11 +288,9 @@ if __name__ == '__main__':
         offlinerendering(filename)
 
 
-    elif RendererOperation == RendererOperationsType.Handling:  # TODO implement those
+    elif RendererOperation == RendererOperationsType.Handling: #Not Used
         pass
-        # timer.timeout.connect(lambda: updateforhandling(filename))
-        # timer.setInterval(700)
-        # timer.start(0)
+
     else:
         raise Exception("Rendering prosses cannot start")
 
