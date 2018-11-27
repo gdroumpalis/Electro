@@ -1,1 +1,3 @@
 https://www.efxkits.us/classification-of-embedded-systems/
+https://en.wikipedia.org/wiki/Python_(programming_language)
+https://en.wikipedia.org/wiki/Embedded_system
