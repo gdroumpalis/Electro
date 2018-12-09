@@ -2,3 +2,6 @@ https://www.efxkits.us/classification-of-embedded-systems/
 https://en.wikipedia.org/wiki/Python_(programming_language)
 https://en.wikipedia.org/wiki/Embedded_system
 http://www.ti.com/lit/ds/symlink/lm35.pdf
+https://el.wikipedia.org/wiki/UART
+https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter
+https://en.wikipedia.org/wiki/Raspbian
