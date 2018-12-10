@@ -7,3 +7,7 @@ https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter
 https://en.wikipedia.org/wiki/Raspbian
 https://en.wikipedia.org/wiki/C_(programming_language)
 http://www.pyqtgraph.org/
+http://www.numpy.org/
+https://pythonhosted.org/pyserial/index.html
+http://doc.qt.io/qt-5/qtdesigner-manual.html
+https://riverbankcomputing.com/software/pyqt/intro
