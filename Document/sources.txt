@@ -5,3 +5,5 @@ http://www.ti.com/lit/ds/symlink/lm35.pdf
 https://el.wikipedia.org/wiki/UART
 https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter
 https://en.wikipedia.org/wiki/Raspbian
+https://en.wikipedia.org/wiki/C_(programming_language)
+http://www.pyqtgraph.org/
