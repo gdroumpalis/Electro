@@ -11,3 +11,4 @@ http://www.numpy.org/
 https://pythonhosted.org/pyserial/index.html
 http://doc.qt.io/qt-5/qtdesigner-manual.html
 https://riverbankcomputing.com/software/pyqt/intro
+https://en.wikipedia.org/wiki/Git
