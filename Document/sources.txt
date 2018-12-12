@@ -12,3 +12,5 @@ https://pythonhosted.org/pyserial/index.html
 http://doc.qt.io/qt-5/qtdesigner-manual.html
 https://riverbankcomputing.com/software/pyqt/intro
 https://en.wikipedia.org/wiki/Git
+https://newbiehack.com/
+Patrick Hood-Daniel  -  https://www.youtube.com/channel/UCC7ifdmN7ebFo-eXBUZkeiw
