@@ -15,3 +15,4 @@ https://en.wikipedia.org/wiki/Git
 https://newbiehack.com/
 Patrick Hood-Daniel  -  https://www.youtube.com/channel/UCC7ifdmN7ebFo-eXBUZkeiw
 https://en.wikipedia.org/wiki/Analog-to-digital_converter
+http://www.porlidas.gr/AVR/EmbInstrGr.htm
