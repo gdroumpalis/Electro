@@ -150,10 +150,10 @@ if __name__ == '__main__':
     devicename = GetDeviceName(sys.argv)
     baudrate = GetBaudrate(sys.argv)
     filename = GetDefaultFilepath(sys.argv)
-    ser = serial.Serial(devicename, baudrate, timeout=0.15)
     maxstep = GetDefaultMaxStep(sys.argv)
     autoofflinerender = GetAutoOfflineRendering(sys.argv)
     if RendererOperation != RendererOperationsType.OfflineRendering:
+        ser = serial.Serial(devicename, baudrate, timeout=0.15)
         f = openfilewithproperfilename()
     print(RendererOperation.name)
     ### START QtApp #####
