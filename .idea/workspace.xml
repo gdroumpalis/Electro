@@ -1,81 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="64833180">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="28" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="14" />
-          <entry key="project.open.time.3" value="13" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="32" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="f2py" value="1" />
-          <entry key="george" value="2" />
-          <entry key="gitignore" value="6" />
-          <entry key="init" value="6" />
-          <entry key="py" value="151" />
-          <entry key="qrc" value="1" />
-          <entry key="settings" value="1" />
-          <entry key="test" value="2" />
-          <entry key="tets" value="1" />
-          <entry key="txt" value="40" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="158" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="" value="74" />
-          <entry key="&quot;&quot;" value="5" />
-          <entry key="Python Console" value="75" />
-          <entry key="dummy" value="119" />
-          <entry key="gitignore" value="60" />
-          <entry key="init" value="366" />
-          <entry key="py" value="20212" />
-          <entry key="txt" value="2096" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="2275" />
-          <entry key="Python" value="20732" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.checkout.local" value="4" />
-          <entry key="git.branch.create.new" value="6" />
-          <entry key="git.branch.delete.local" value="6" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="Electro" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3923">
+              <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="28" />
     <option name="width" value="1920" />
     <option name="height" value="1052" />
@@ -181,7 +128,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="MRenderer&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mrend&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;pyqt&#9;FILE&#9;file:///home/terminux/Apps/pycharm-community-2018.2.2/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py&#10;ign&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;igno&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;i&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init.py&#10;m&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mren&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;initi&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -555,10 +503,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" x="1920" y="28" width="919" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
-      <window_info x="2133" y="28" width="929" height="1052" id="Structure" order="1" type="WINDOWED" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" x="1920" y="28" width="919" height="1052" id="Project" order="0" type="WINDOWED" visible="true" weight="0.21940929" />
+      <window_info x="2133" y="28" width="929" height="1052" id="Structure" order="1" type="WINDOWED" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.22890295" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.329718" />
@@ -619,15 +567,7 @@
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="origin/RendererTests" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                </collection>
+                <collection />
               </option>
               <option name="FILTERS">
                 <map>
@@ -659,43 +599,7 @@
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="origin/RendererTests" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="renderertests" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                  <UserGroup>
-                    <option name="users">
-                      <list>
-                        <option value="origin/renderertests" />
-                      </list>
-                    </option>
-                  </UserGroup>
-                </collection>
+                <collection />
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -710,9 +614,46 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/RendererTests" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/renderertests" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="renderertests" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add todos. Add testing impl of live plottings. Not yet tested" />
@@ -830,13 +771,7 @@
     <entry file="file://$PROJECT_DIR$/test/liveplottinglogging2aedaef2-e717-45ac-b380-432ed9961b78.txt" />
     <entry file="file://$PROJECT_DIR$/test/liveplottingloggingbc0e9dc5-306a-4941-a6ba-162751f46620.txt" />
     <entry file="file://$PROJECT_DIR$/test/metallica.txt" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/numpy/random/mtrand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="1594" column="4" selection-start-line="1594" selection-start-column="4" selection-end-line="1594" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-250549360/numpy/random/mtrand.py" />
     <entry file="file://$PROJECT_DIR$/Examples/pyqtgraphSpeedPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -870,13 +805,7 @@
     <entry file="file://$PROJECT_DIR$/sampling0375cd3a-1518-4379-8853-b0f3951c2db2.txt" />
     <entry file="file://$PROJECT_DIR$/sampling17b347bf-1113-42e8-859f-349a143b3701.txt" />
     <entry file="file://$PROJECT_DIR$/sampling5e19910d-68d7-4616-8a56-57c86872edaf.txt" />
-    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="239" selection-start-line="239" selection-end-line="239" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialutil.py" />
     <entry file="file://$PROJECT_DIR$/samplingf8d10ef0-3a7d-4ba6-829b-794830a29f57.txt" />
     <entry file="file://$PROJECT_DIR$/samplingc44cc5fc-ae61-41b8-8759-a2370dc324ca.txt" />
     <entry file="file://$PROJECT_DIR$/samplingb3c5643d-daf6-421b-9fca-eec091950d90.txt" />
@@ -905,13 +834,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5440">
-          <caret line="282" column="31" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/lib/python3.5/site-packages/serial/serialposix.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33260">
@@ -919,13 +842,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5420">
-          <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/lib64/python3.5/site-packages/serial/serialposix.py" />
     <entry file="file://$PROJECT_DIR$/Renderer/MRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -936,27 +853,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devices.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/lib64/python3.5/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/devices.txt" />
+    <entry file="file:///usr/lib64/python3.5/subprocess.py" />
     <entry file="file://$PROJECT_DIR$/init.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/maindialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3923">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
         </state>
       </provider>
     </entry>
