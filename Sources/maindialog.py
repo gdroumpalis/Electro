@@ -204,6 +204,7 @@ class MainUI(QMainWindow):
     def startliveplotting(self):
         if self.ui.liveplottingcheckbox.isChecked() or self.ui.loggingcheckbox.isChecked() or self.ui.filecheckbox.isChecked():
             print(__file__)
+            print(self.getcompbinedfilename())
             Popen([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
                    str(RendererOperationsType.LivePlotting.value), self.ui.selecteddevicecombobox.currentText(),
                    self.ui.speedspinbox.text(), self.getcompbinedfilename(), "None",
@@ -211,6 +212,7 @@ class MainUI(QMainWindow):
 
     def startsampling(self):
         print(__file__)
+        print(self.getcompbinedfilename2())
         check_call([self.getpythonversion(), os.path.join(self.initfilepath, "Renderer/MRenderer.py"),
                     str(RendererOperationsType.Sampling.value), self.ui.selecteddevicecombobox.currentText(),
                     self.ui.speedspinbox.text(), self.getcompbinedfilename2(), self.ui.tospinbox.text(),
@@ -300,7 +302,7 @@ class MainUI(QMainWindow):
             filename = os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
             return filename
         else:
-            file = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+            filename = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
             return filename
 
     def getcompbinedfilename2(self):
