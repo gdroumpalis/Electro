@@ -300,7 +300,7 @@ class MainUI(QMainWindow):
             filename = os.path.join(self.ui.filepathlineedit.text(), self.ui.filename.text())
             return filename
         else:
-            file = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
+            filename = os.path.join(self.ui.filepathlineedit.text(), "liveplottinglogging{0}.txt".format(uuid.uuid4()))
             return filename
 
     def getcompbinedfilename2(self):
