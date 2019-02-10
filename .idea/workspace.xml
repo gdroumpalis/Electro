@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="25cffb15-19ae-4188-8db1-0c033c7e5ce3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +12,11 @@
     <session id="64833180">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -141,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="setting&#9;ACTION&#9;WelcomeScreen.Settings&#10;MRenderer&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mre&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mrend&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;pyqt&#9;FILE&#9;file:///home/terminux/Apps/pycharm-community-2018.2.2/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py&#10;ign&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;igno&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/.gitignore&#10;i&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init.py&#10;m&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;mren&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Renderer/MRenderer.py&#10;main&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;mai&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/Sources/maindialog.py&#10;init&#9;RUN_CONFIGURATION&#9;init&#10;ini&#9;FILE&#9;file:///home/terminux/Documents/Projects/Electro/init&#10;initi&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
